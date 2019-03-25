@@ -1,0 +1,17 @@
+<%= form_with(model: elevator, local: true) do |form| %>
+  <% if elevator.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(elevator.errors.count, "error") %> prohibited this elevator from being saved:</h2>
+
+      <ul>
+      <% elevator.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

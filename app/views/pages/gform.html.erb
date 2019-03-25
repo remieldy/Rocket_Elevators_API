@@ -1,0 +1,543 @@
+<%= form_with(model: @quote, local: true) do |form| %>    
+    
+    <!-- SLIDE TOP -->
+
+
+    <div id="slidetop">
+
+        <div class="container">
+            
+            <div class="row">
+
+                <div class="col-md-4">
+                    <h6><i class="icon-heart"></i> WHY ROCKET ELEVATORS ?</h6>
+                    <p>We are number one in construction of elevator in North America and second in Europe. We have the most efficient workers and our values are the customer service, fidelity and respect. Contact us and we guarantee that you will completely satisfy.
+
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <h6><i class="icon-envelope"></i> CONTACT INFO</h6>
+                    <ul class="list-unstyled">
+                        <li><b>Address:</b> 725 Boulevard Lebourgneuf <br /> Quebec, G2J 0C4, Canada</li>
+                        <li><b>Phone:</b> 1-800-565-2390</li>
+                        <li><b>Email:</b> <a href="mailto:support@yourname.com">support@codeboxx.com</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <a class="slidetop-toggle" href="#"><!-- toggle button --></a>
+
+    </div>
+    <!-- /SLIDE TOP -->
+
+
+    <!-- wrapper -->
+    <div id="wrapper">
+
+        <!-- 
+            AVAILABLE HEADER CLASSES
+            Default nav height: 96px
+            .header-md 		= 70px nav height
+            .header-sm 		= 60px nav height
+            .b-0 		= remove bottom border (only with transparent use)
+            .transparent	= transparent header
+            .translucent	= translucent header
+            .sticky			= sticky header
+            .static			= static header
+            .dark			= dark header
+            .bottom			= header on bottom
+            
+            shadow-before-1 = shadow 1 header top
+            shadow-after-1 	= shadow 1 header bottom
+            shadow-before-2 = shadow 2 header top
+            shadow-after-2 	= shadow 2 header bottom
+            shadow-before-3 = shadow 3 header top
+            shadow-after-3 	= shadow 3 header bottom
+            .clearfix		= required for mobile menu, do not remove!
+            Example Usage:  class="clearfix sticky header-sm transparent b-0"
+        -->
+        <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+            <!-- TOP NAV -->
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Logo -->
+
+                    <a class="logo float-left scrollTo" href="#top">
+                        <img src="assets/R2.png" alt="" />
+                    </a>
+
+                    <!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+								<nav class="nav-main">
+	
+									<!-- 
+										.nav-onepage
+										Required for onepage navigation links
+										
+										Add .external for an external link!
+									-->
+									<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+										<%= link_to "", '/index', :method => :get %>
+										<li class="active"><!-- HOME -->
+											<a href="index.html">
+												HOME
+											</a>
+										</li>
+										<li><!-- SERVICES -->
+											<a class="dropdown-toogle">
+												SERVICES
+	
+											</a>
+											<ul class="dropdown-menu">
+												<li>
+													<%= link_to "", '/residential', :method => :get %> <a href="residential.html">Residential</a>
+												</li>
+												<li>
+													<%= link_to "", '/commercial', :method => :get %> <a href="commercial.html">Commercial</a>
+												</li>
+											</ul>
+											
+										</li>
+											<%= link_to "", '/index', :method => :get %> <a href="index.html#work">
+										<li><!-- WORK -->
+												PORTFOLIO
+											</a>
+										</li>
+											<%= link_to "", '/index', :method => :get %><a href="index.html#news">
+										<li><!-- NEWS -->
+												NEWS
+											</a>
+										</li>
+											<%= link_to "", '/index', :method => :get %><a href="index.html#contact">
+										<li><!-- OVERVIEW -->
+												CONTACT
+											</a>
+										</li>
+											<%= link_to "", '/index', :method => :get %><a href="index.html#clients">
+										<li><!-- CLIENTS -->
+												CLIENTS
+											</a>
+										</li>
+										<%=link_to "", '/emp-dashboard', :method => :get %>
+                                <li><!-- CLIENTS -->
+                                    <a href="/emp-dashboard">
+                                        EMPLOYEES
+                                    </a>
+                                </li>
+							<%=link_to "", '/stats', :method => :get %>
+                                <li> <!-- STATS -->
+                                    <a href="stats">
+                                        STATS
+                                    </a>
+                                </li>
+									</ul>
+	
+								</nav>
+							</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+
+        </div>
+
+
+
+        <!-- REVOLUTION SLIDER -->
+
+
+        <!-- /REVOLUTION SLIDER -->
+
+
+        <hr class="m-0" /><!-- 1px line separator -->
+
+
+        <!-- BLUE BUTTON CALLOUT 
+        <a href="#" class="btn btn-xlg btn-primary fs-30 fullwidth m-0 rad-0 p-40">
+                <button>Awards and Projects </button>
+                <button>Residential's services</button>
+                <button>Corporate's services</button>
+        </a>-->
+
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="container">
+
+                <header class="text-center mb-60-1">
+                    <h2>Quote</h2>
+                    <p class="lead font-lato">Get a free quote now.</p>
+                    <hr />
+                </header>
+
+
+                <div class="row">
+
+                    <!-- FORM -->
+                    <div class="col-md-8 col-sm-8">
+
+                        <h3>Enter your informations </h3>
+
+                        
+                        <!--
+                            MESSAGES
+                            
+                                How it works?
+                                The form data is posted to php/contact.php where the fields are verified!
+                                php.contact.php will redirect back here and will add a hash to the end of the URL:
+                                    #alert_success 		= email sent
+                                    #alert_failed		= email not sent - internal server error (404 error or SMTP problem)
+                                    #alert_mandatory	= email not sent - required fields empty
+                                    Hashes are handled by assets/js/contact.js
+                                Form data: required to be an array. Example:
+                                    contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
+                                    Also, add `required` to input fields if is a mandatory field. 
+                                    Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
+                                PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
+                                             ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
+                                WARNING! Do not change the `email` and `name`!
+                                            contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+                                            contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+                        -->
+
+                        <!-- Alert Success -->
+                        <div id="alert_success" class="alert alert-success mb-30">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <strong>Thank You!</strong> Your message successfully sent!
+                        </div><!-- /Alert Success -->
+
+
+                        <!-- Alert Failed -->
+                        <div id="alert_failed" class="alert alert-danger mb-30">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <strong>[SMTP] Error!</strong> Internal server error!
+                        </div><!-- /Alert Failed -->
+
+
+                        <!-- Alert Mandatory -->
+                        <div id="alert_mandatory" class="alert alert-danger mb-30">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+                        </div><!-- /Alert Mandatory -->
+
+<!-------------------------FORM DEBUT------------------------------------------------------>
+
+                        <action="php/contact.php" method="post" enctype="multipart/form-data">
+                            <fieldset>
+                                <input type="hidden" name="action" value="contact_send" />
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <%= form.label :full_name %>
+                                        <%= form.text_field :full_name, class: 'form-control-5'%>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <%= form.label :company_name %>
+                                        <%= form.text_field :company_name, class: 'form-control-5'%>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <%= form.label :email %>
+                                        <%= form.text_field :email, class: 'form-control-5'%>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <%= form.label :phone_number %>
+                                        <%= form.text_field :phone_number, class: 'form-control-5'%>
+                                    </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                        <%= form.label :department %>
+                                        <%= form.select :department, [['-', '-'], ['Residential','Residential'], ['Commercial','Commercial'], ['Corporate','Corporate'], ['Hybrid','Hybrid']] %>
+                                    </div>
+                                </div>
+                                <div class="row-1">
+                                    
+                                        <div class="col-md-4">
+                                            <%= form.label :number_of_apartments %>
+                                            <%= form.text_field :number_of_apartments, class: 'form-control-1', name:'quote[resi_number_of_apartments]', id: 'resi-app'%>
+                                            </div>
+                                        <div class="col-md-4">
+                                            <%= form.label :number_of_floors %>
+                                            <%= form.text_field :number_of_floors, class: 'form-control-1', name:'quote[resi_number_of_floors]', id: 'resi-floor' %>
+                                        </div>
+                                            <div class="col-md-4">
+                                            <%= form.label :number_of_basements %>
+                                            <%= form.text_field :number_of_basements, class: 'form-control-1', name:'quote[resi_number_of_basements]', id: 'resi-quar'  %>
+                                            </div>
+                              
+                                </div>
+                                <div class="row-2">
+                                        <div class="col-md-4">
+                                            <%= form.label :number_of_elevators %>
+                                            <%= form.text_field :number_of_elevators, class: 'form-control-4', name:'quote[number_of_elevators]', id: 'com-asce' %>
+                                            </div>
+                                        <div class="col-md-4">
+                                            <%= form.label :number_of_apartments %>
+                                            <%= form.text_field :number_of_apartments, class: 'form-control-4', name:'quote[comm_number_of_apartments]', id: 'com-app'  %>
+                                        </div>
+                                            <div class="col-md-4">
+                                            <%= form.label :number_of_parking %>
+                                            <%= form.text_field :number_of_parking, class: 'form-control-4', name:'quote[comm_number_of_parking]', id: 'com-space'  %>
+                                            </div>
+                                        <div class="col-md-4">
+                                            <%= form.label :number_of_basements %>
+                                            <%= form.text_field :number_of_basements, class: 'form-control-4', name:'quote[comm_number_of_basements]', id: 'com-quar'  %>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <%= form.label :number_of_stores %>
+                                            <%= form.text_field :number_of_stores, class: 'form-control-4', name:'quote[comm_number_of_stores]', id: 'com-com'  %>
+                                            </div>
+                        
+                                                
+                                </div>
+
+                                <div class="row-3">
+                                        <div class="col-md-4">
+                                            <%= form.label :number_of_floors %>
+                                            <%= form.text_field :number_of_floors, class: 'form-control-2', name:'quote[corp_number_of_floors]', id: 'cor-floor' %>
+                                            </div>
+                                        <div class="col-md-4">
+                                            <%= form.label :number_of_basements %>
+                                            <%= form.text_field :number_of_basements, class: 'form-control-2', name:'quote[corp_number_of_basements]', id: 'cor-quar'  %>
+                                        </div>
+                                            <div class="col-md-4">
+                                            <%= form.label :max_occupancy_per_floor %>
+                                            <%= form.text_field :max_occupancy_per_floor, class: 'form-control-2', name:'quote[corp_max_occupancy_per_floor]', id: 'cor-occu' %>
+                                         </div>
+                                            <div class="col-md-4">
+                                                <%= form.label :number_of_stores %>
+                                                <%= form.text_field :number_of_stores, class: 'form-control-2', name:'quote[corp_number_of_stores]', id: 'cor-com' %>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <%= form.label :number_of_parking %>
+                                                <%= form.text_field :number_of_parking, class: 'form-control-2', name:'quote[corp_number_of_parking]', id: 'cor-space'  %>
+                                            </div>
+
+                                </div>
+                                <div class="row-4">
+                                        <div class="col-md-4">
+                                            <%= form.label :number_of_floors %>
+                                            <%= form.text_field :number_of_floors, class: 'form-control-3', name:'quote[hyb_number_of_floors]', id: 'hyb-floor' %>
+                                            </div>
+                                        <div class="col-md-4">
+                                            <%= form.label :number_of_basements %>
+                                            <%= form.text_field :number_of_basements, class: 'form-control-3', name:'quote[hyb_number_of_basements]', id: 'hyb-quar'  %>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <%= form.label :max_occupancy_per_floor %>
+                                            <%= form.text_field :max_occupancy_per_floor, class: 'form-control-3', name:'quote[hyb_max_occupancy_per_floor]', id: 'hyb-occu'%>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <%= form.label :number_of_parking %>
+                                            <%= form.text_field :number_of_parking, class: 'form-control-3', name:'quote[hyb_number_of_parking]', id: 'hyb-space'  %>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <%= form.label :number_of_stores %>
+                                            <%= form.text_field :number_of_stores, class: 'form-control-3', name:'quote[hyb_number_of_stores]', id: 'hyb-com' %>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <%= form.label :hour_of_activity %>
+                                            <%= form.text_field :hour_of_activity, class: 'form-control-3', name:'quote[hour_of_activity]', id: 'hyb-hour'  %>
+                                        </div>
+                                    
+                                </div>
+                                    
+                                <div class="row">
+                                   <div class="col-md-4-1">
+                                       <label class="label_form" for="radio-button">Service level *</label>
+                                           <table>
+                                                   <tr>
+                                                       <td><%= form.radio_button(:service_level, 'Standard') %></td>
+                                                       <td><%= form.label :Standard %></td>
+                                                   </tr>
+                                                   <tr>
+                                                       <td><%= form.radio_button(:service_level, 'Premium') %></td>
+                                                       <td><%= form.label :Premium %></td>
+                                                   </tr>
+                                                   <tr>
+                                                       <td><%= form.radio_button(:service_level, 'Excelium') %></td>
+                                                       <td><%= form.label :Excelium %></td>
+                                                   </tr>
+                                           </table>
+                                   </div>
+                               </div>
+                                
+                            </fieldset>
+
+
+                    </div>
+                    <!-- /FORM -->
+
+                    <!-- INFO -->
+                    <div class="col-md-4 col-sm-4">
+
+                            <!-- PAYMENT METHOD -->
+                            <!-- /PAYMENT METHOD -->
+
+
+                            <!-- CREDIT CARD PAYMENT -->
+
+                            <!-- /CREDIT CARD PAYMENT -->
+
+
+                            <!-- TOTAL / PLACE ORDER -->
+                            <div class="toggle-transparent toggle-bordered-full clearfix">
+                                <div class="toggle active">
+                                    <div class="toggle-content-1" style="display: block;">
+                                        <span class="clearfix">
+                                            <strong class="float-left">Total elevators:</strong>
+                                            <span id="float-right-1"></span>
+                                            <%= form.hidden_field :'number_of_elevators', name:'quote[number_of_elevators]'%>
+                                        </span>
+
+                                        <hr>
+
+                                        <span class="clearfix">
+                                            <span id="float-right-2"></span>
+                                            <strong class="float-left">Standard price unit:</strong><br>
+                                            <span>Installation fee:</span>
+                                            <span id="fees"></span>
+                                            <%= form.hidden_field :'installation_cost', name:'quote[installation_cost]' %>
+                                        </span>
+
+                                        <hr>
+                                        <span class="clearfix">
+                                                <strong class="float-left">Approximate price:</strong>
+                                                <span id="float-right-3"></span>
+                                                <%= form.hidden_field :'total_cost', name:'quote[total_cost]' %>
+
+                                        </span>
+                                        <hr>
+                                    <div class="actions"> 
+                                    <%= form.submit class: 'btn btn-primary btn-lg btn-block fs-15', :onclick => "alert('Have you filled all the required fields? If Yes, your quote was successfully sent!')"%>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- /TOTAL / PLACE ORDER -->
+                                    
+
+                            <h2 id = "visit-us">Visit Us</h2>
+
+                            <!-- 
+                            Available heights
+                                h-100
+                                h-150
+                                h-200
+                                h-250
+                                h-300
+                                h-350
+                                h-400
+                                h-450
+                                h-500
+                                h-550
+                                h-600
+                            -->
+                            <div id="map2" class="h-0 grayscale"></div>
+
+                            <hr />
+
+                            <p>
+                                <span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 725 Boulevard Lebourgneuf, Québec, QC G2J 0C4 </span>
+                                <span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1800-555-1234">1-800-555-1234</a></span>
+                                <span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:mail@yourdomain.com">support@codeboxx.com</a></span>
+                            </p>
+                                
+
+                    </div>
+
+
+                            </div>
+                        </div>
+                        <!-- /CREATE ACCOUNT -->
+
+                    
+                    <!-- /CHECKOUT -->
+                    
+                </div>
+                    <!-- /INFO -->
+                    
+                </div>
+
+            </div>
+        </section>
+        <!-- /CONTACT -->
+
+
+
+
+        <!-- FOOTER -->
+        <footer id="footer">
+            <div class="container">
+
+
+                <div class="row">
+
+                    <!-- col #1 -->
+                    <div class="col-md-8">
+
+                        <h3 class="letter-spacing-1">WHY ROCKET ELEVATORS ?</h3>
+
+                        <!-- Small Description -->
+                        <p>
+                            We are number one in construction of elevator in North America and second in Europe. We have the most efficient workers and our values are the customer service, 
+                            fidelity and respect. Contact us and we guarantee that you will completely satisfy. 
+                        </p>
+                        <h2>1-800-555-1234</h2>
+                    </div>
+                    <!-- /col #1 -->
+ 
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                <div class="container">
+                    &copy; All Rights Reserved, Rocket Elevators
+                </div>
+            </div>
+
+        </footer>
+        <!-- /FOOTER -->
+        
+    </div>
+    <%=javascript_include_tag "contact" %>
+    <!-- /wrapper -->
+
+
+    <!-- SCROLL TO TOP -->
+    <a href="#" id="toTop"></a>
+
+    <% end %>
+
+
+    <!-- PRELOADER -->
+    <!-- /PRELOADER -->
+
+
+    <!-- JAVASCRIPT FILES -->
+
+    
+    <!-- STYLESWITCHER - REMOVE -->
+
+
+    <!-- REVOLUTION SLIDER -->

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rocket Elevators</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'R2.png' %>
+  </head>
+
+  <body class="smoothscroll enable-animation">
+    <%= yield %>
+    <script>var plugin_path = 'assets/plugins/';</script>
+  
+    <% if flash[:error].present? %>
+    <p class='flash-error'><%= flash[:error] %></p>
+    <% end %>
+    <% if flash[:notice].present? %>
+    <p class='flash-notice'><%= flash[:notice] %></p>
+    <% end %>
+
+    </body>
+
+</html>

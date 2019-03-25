@@ -1,0 +1,332 @@
+
+	<body class="smoothscroll enable-animation">
+
+		<!-- SLIDE TOP -->
+		<div id="slidetop">
+
+			<div class="container">
+				
+				<div class="row">
+
+					<div class="col-md-4">
+						<h6><i class="icon-heart"></i> WHY ROCKET ELEVATOR ?</h6>
+						<p>We are number one in the residential industry as well as in the coporate industry. </p>
+					</div>
+
+
+					<div class="col-md-4">
+						<h6><i class="icon-envelope"></i> CONTACT INFO</h6>
+						<ul class="list-unstyled">
+							<li><b>Address:</b> 725 Boulevard Lebourgneuf, G2J 0C4<br /> Québec, Canada</li>
+							<li><b>Phone:</b> 418-555-5555</li>
+							<li><b>Email:</b> <a href="www.codeboxx.biz">support@codeboxx.com</a></li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+
+			<a class="slidetop-toggle" href="#"><!-- toggle button --></a>
+
+		</div>
+		<!-- /SLIDE TOP -->
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			
+
+
+			<!-- 
+				PAGE HEADER 
+				
+				CLASSES:
+					.page-header-xs	= 20px margins
+					.page-header-md	= 50px margins
+					.page-header-lg	= 80px margins
+					.page-header-xlg= 130px margins
+					.dark			= dark page header
+
+					.shadow-before-1 	= shadow 1 header top
+					.shadow-after-1 	= shadow 1 header bottom
+					.shadow-before-2 	= shadow 2 header top
+					.shadow-after-2 	= shadow 2 header bottom
+					.shadow-before-3 	= shadow 3 header top
+					.shadow-after-3 	= shadow 3 header bottom
+			-->
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+					<!-- TOP NAV -->
+					<header id="topNav">
+						<div class="container">
+	
+							<!-- Mobile Menu Button -->
+							<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+								<i class="fa fa-bars"></i>
+							</button>
+	
+							<!-- Logo -->
+	
+							<a class="logo float-left scrollTo" href="#top">
+								<img src="demo_files/images/R2.png" alt="" />
+							</a>
+	
+							<!-- 
+								                       													Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+								<nav class="nav-main">
+	
+									<!-- 
+										.nav-onepage
+										Required for onepage navigation links
+										
+										Add .external for an external link!
+									-->
+									<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+										<%= link_to "", '/index', :method => :get %>
+										<li class="active"><!-- HOME -->
+											<a href="index.html">
+												HOME
+											</a>
+										</li>
+										<li><!-- SERVICES -->
+											<a class="dropdown-toogle">
+												SERVICES
+	
+											</a>
+											<ul class="dropdown-menu">
+												<li>
+													<%= link_to "", '/residential', :method => :get %> <a href="residential.html">Residential</a>
+												</li>
+												<li>
+													<%= link_to "", '/commercial', :method => :get %> <a href="commercial.html">Commercial</a>
+												</li>
+											</ul>
+											
+										</li>
+											<%= link_to "", '/index', :method => :get %> <a href="index.html#work">
+										<li><!-- WORK -->
+												PORTFOLIO
+											</a>
+										</li>
+											<%= link_to "", '/index', :method => :get %><a href="index.html#news">
+										<li><!-- NEWS -->
+												NEWS
+											</a>
+										</li>
+											<%= link_to "", '/index', :method => :get %><a href="index.html#contact">
+										<li><!-- OVERVIEW -->
+												CONTACT
+											</a>
+										</li>
+											<%= link_to "", '/index', :method => :get %><a href="index.html#clients">
+										<li><!-- CLIENTS -->
+												CLIENTS
+											</a>
+										</li>
+										<%=link_to "", '/emp-dashboard', :method => :get %>
+                                <li><!-- CLIENTS -->
+                                    <a href="/emp-dashboard">
+                                        EMPLOYEES
+                                    </a>
+                                </li>
+							<%=link_to "", '/stats', :method => :get %>
+                                <li> <!-- STATS -->
+                                    <a href="stats">
+                                        STATS
+                                    </a>
+                                </li>
+									</ul>
+	
+								</nav>
+							</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+	
+				</div>
+			<section class="page-header page-header-xs">
+				<div class="container">
+
+					<h1 style= font-weight:bold; >Popular's Project</h1>
+					<span class="font-lato fs-18 hidden-xs-down">Awarded Of For The Most Popular Project</span>
+
+
+					<!-- page tabs -->
+					<!-- /page tabs -->
+
+				</div>
+			</section>
+			<!-- /PAGE HEADER -->
+
+
+
+
+			<!-- -->
+			<section>
+				<div class="container">
+					
+					<!-- OWL SLIDER -->
+					<div class="container">
+
+						<div class="owl-carousel buttons-autohide controlls-over m-0" data-plugin-options='{"items": 1, "autoPlay": 3500, "autoHeight": false, "navigation": true, "pagination": false, "transitionStyle":"fade", "progressBar":"false"}'>
+							<div>
+								<img class="img-fluid" src="https://www.connectionselevator.com/wp-content/uploads/2017/10/advances-in-modern-elevators-1024x683.jpg" alt="">
+							</div>
+							<div>
+								<img class="img-fluid" src="https://amp.businessinsider.com/images/596e729fa47cb5eb018b4e99-750-420.png" alt="">
+							</div>
+							<div>
+								<img class="img-fluid" src="http://www.mowreyelevator.com/wp-content/uploads/2016/05/elevator-design.jpg" alt="">
+							</div>
+						</div>
+
+					</div>
+					<!-- /OWL SLIDER -->
+
+					
+				</div>
+			</section>
+			<!-- / -->
+
+
+
+			<!-- -->
+			<section>
+				<div class="container">
+
+					<div class="row m-0">
+						
+						<div class="col-md-8 col-sm-8">
+
+							<!-- Subtitle -->
+							<div class="heading-title heading-border">
+								<h2>Most popular project</h2>
+
+
+							</div>
+							<!-- /Subtitle -->
+
+							<p>We are not the only one to say that we are the best, the people say it to !</p>
+							<p class="font-lato fs-18">First plce for the most popular project among the population</p>
+						
+						</div>
+
+						<div class="col-md-4 col-sm-4">
+						
+							<div class="card card-default">
+								<div class="card-block">
+									
+									<p class="font-lato fs-18">Infos</p>
+
+									<ul class="portfolio-detail-list list-unstyled m-0">
+										<li><span><i class="fa fa-user"></i>Director:</span> Marc-Antoine Tanguay</li>
+										<li><span><i class="fa fa-calendar"></i>Completed</span> 16th May 2017</li>
+                                        <li><span><i class="fa fa-lightbulb-o"></i>Technologies:</span> Rocket Elevetor</li>
+                                        <li><span><i class="fa fa-lightbulb-o"></i>City:</span> Dubai</li>
+									
+									</ul>
+
+								</div>
+								
+								<div class="card-footer">
+
+									<!-- Social Icons -->
+
+
+									<!-- /Social Icons -->
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+			<!-- -->
+
+
+
+			<!-- -->
+
+			<!-- / -->
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+					<div class="container">
+	
+	
+						<div class="row">
+	
+							<!-- col #1 -->
+							<div class="col-md-8">
+	
+								<h3 class="letter-spacing-1">WHY ROCKET ELEVATORS ?</h3>
+	
+								<!-- Small Description -->
+								<p>
+									We are number one in construction of elevator in North America and second in Europe. We have the most efficient workers and our values are the customer service, 
+									fidelity and respect. Contact us and we guarantee that you will completely satisfy. 
+								</p>
+								<h2>1-800-555-1234</h2>
+							</div>
+							<!-- /col #1 -->
+	
+						
+	
+						</div>
+	
+					</div>
+	
+					<div class="copyright">
+						<div class="container">
+							&copy; All Rights Reserved, Rocket Elevators
+						</div>
+					</div>
+	
+				</footer>
+			<!-- /FOOTER -->
+
+		</div>
+		<!-- /wrapper -->
+		
+	</body>
+</html>

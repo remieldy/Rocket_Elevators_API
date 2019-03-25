@@ -1,0 +1,558 @@
+
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky transparent header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="#top">
+							<img src="assets/R2.png" alt="" />
+							<img src="assets/R2.png" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+								<nav class="nav-main">
+	
+									<!-- 
+										.nav-onepage
+										Required for onepage navigation links
+										
+										Add .external for an external link!
+									-->
+									<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+										<%= link_to "", '/index', :method => :get %>
+										<li class="active"><!-- HOME -->
+											<a href="index.html">
+												HOME
+											</a>
+										</li>
+										<li><!-- SERVICES -->
+											<a class="dropdown-toogle">
+												SERVICES
+	
+											</a>
+											<ul class="dropdown-menu">
+												<li>
+													<%= link_to "", '/residential', :method => :get %> <a href="residential.html">Residential</a>
+												</li>
+												<li>
+													<%= link_to "", '/commercial', :method => :get %> <a href="commercial.html">Commercial</a>
+												</li>
+											</ul>
+											
+										</li>
+											<%= link_to "", '/index', :method => :get %> <a href="index.html#work">
+										<li><!-- WORK -->
+												PORTFOLIO
+											</a>
+										</li>
+											<%= link_to "", '/index', :method => :get %><a href="index.html#news">
+										<li><!-- NEWS -->
+												NEWS
+											</a>
+										</li>
+											<%= link_to "", '/index', :method => :get %><a href="index.html#contact">
+										<li><!-- OVERVIEW -->
+												CONTACT
+											</a>
+										</li>
+											<%= link_to "", '/index', :method => :get %><a href="index.html#clients">
+										<li><!-- CLIENTS -->
+												CLIENTS
+											</a>
+										</li>
+										<%=link_to "", '/emp-dashboard', :method => :get %>
+                                <li><!-- CLIENTS -->
+                                    <a href="/emp-dashboard">
+                                        EMPLOYEES
+                                    </a>
+                                </li>
+							<%=link_to "", '/stats', :method => :get %>
+                                <li> <!-- STATS -->
+                                    <a href="stats">
+                                        STATS
+                                    </a>
+                                </li>
+									</ul>
+	
+								</nav>
+							</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+			<!-- SLIDER -->
+			<section id="slider" class="fullheight parallax parallax-4" style="background-image:url('http://wallpapertop.net/wp-content/uploads/2018/02/Elevator%20Wallpaper.jpg');">
+				<div class="overlay dark-1"><!-- dark overlay [0 to 9 opacity] --></div>
+
+				<div class="display-table">
+					<div class="display-table-cell vertical-align-middle">
+						<div class="container">
+
+							<div class="slider-featured-text text-center">
+								<h1 class="text-white wow fadeInUp" data-wow-delay="0.4s">
+									Commercial's Services
+								</h1>
+								<h2 class="fw-300 text-white wow fadeInUp" data-wow-delay="0.8s">Create Your Dream Project With Us</h2>
+								<%= link_to "", '/gform', :method => :get %> <a class="btn btn-primary btn-lg wow fadeInUp" data-wow-delay="1s" href="gform.html">FREE QUOTE</a>
+							</div>
+				
+						</div>
+					</div>
+				</div>
+
+			</section>
+			<!-- /SLIDER -->
+
+
+
+			<!-- CALLOUT -->
+			<section class="callout-dark heading-title heading-arrow-bottom" style="z-index:100;">
+				<div class="container">
+
+					<div class="text-center">
+						<h3 class="fs-30">Elevate Safely, Speed And Style</h3>
+						<p>We Can Produce Complexe Projects And We Are Number One In The Commercial's Industry.</p>
+					</div>
+
+				</div>
+			</section>
+			<!-- /CALLOUT -->
+
+
+
+			<!-- ABOUT -->
+			<section id="about">
+				<div class="container">
+
+					<header class="text-center mb-60">
+						<h2>We Are Rocket Elevators</h2>
+						<p class="lead font-lato">All The Informations You Need</p>
+						<hr />
+					</header>
+
+
+					<div class="row">
+
+						<div class="col-sm-6">
+							<img class="img-fluid" src="http://www.marketresearchblog.org/wp-content/uploads/2018/12/Industrial-Elevator-678x381.jpg" alt="" />
+						</div>
+
+						<div class="col-sm-6">
+							<p class="dropcap">We are number one in construction of elevator in North America and second in Europe. We have the most efficient workers and our values are the customer service, fidelity and respect. Contact us and we guarantee that you will completely satisfy..</p>
+
+							<hr />
+
+							<div class="row countTo-sm text-center">
+
+								<div class="col-6 col-sm-4">
+									<i class="fa fa-users fs-20"></i> &nbsp; 
+									<span class="countTo" data-speed="500" style="color: black">829</span>
+									<h6>HAPPY CLIENTS</h6>
+								</div>
+
+								<div class="col-6 col-sm-4">
+									<i class="fa fa-briefcase fs-20"></i> &nbsp; 
+									<span class="countTo" data-speed="500" style="color:black">1273</span>
+									<h6>FINISHED PROJECTS</h6>
+								</div>
+
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+				</div>
+			</section>
+			<!-- /ABOUT -->
+
+			
+			
+			<!-- VISION/SKILL/SPECIAL -->
+			<section id="skills" class="alternate">
+				<div class="container">
+
+					<div class="row">
+					
+						<div class="col-lg-4">
+
+							<div class="heading-title heading-border-bottom">
+								<h3>Rockets Elevators Values</h3>
+							</div>
+
+							<div class="toggle toggle-transparent-body toggle-accordion">
+
+								<div class="toggle active">
+									<label>Respect</label>
+									<div class="toggle-content">
+										<p>We respect our clients and we work for them with consideration of their situation. </p>
+									</div>
+								</div>
+
+								<div class="toggle">
+									<label>Our long-term vison</label>
+									<div class="toggle-content">
+										<p>We provide services not only during the project, but after the projet as well.</p>
+									</div>
+								</div>
+
+								<div class="toggle">
+									<label>Excellence</label>
+									<div class="toggle-content">
+										<p>Our high standards is our lifestyle.</p>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="col-lg-4">
+
+							<div class="heading-title heading-border-bottom">
+								<h3>Rockets Elevators's Projects</h3>
+							</div>
+
+							<h6 class="barre">Skyscraper's Buildings 56%</h6>
+							<div class="progress progress-lg" style="background-color:white;"><!-- progress bar -->
+								<div class="progress-bar progress-bar-warning progress-bar-striped active text-left" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 56%; min-width: 2em;">
+								</div>
+							</div><!-- /progress bar -->
+
+							<h6 class="barre">Quarries's Projects 28%</h6>
+							<div class="progress progress-lg" style="background-color:white;"><!-- progress bar -->
+								<div class="progress-bar progress-bar-danger progress-bar-striped active text-left" role="progressbar" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100" style="width: 28%; min-width: 2em;">
+		
+								</div>
+							</div><!-- /progress bar -->
+
+							<h6 class="barre">Other's Projects 16%</h6>
+							<div class="progress progress-lg" style="background-color:white;"><!-- progress bar -->
+								<div class="progress-bar progress-bar-info progress-bar-striped active text-left" role="progressbar" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100" style="width: 16%; min-width: 2em;">
+								</div>
+							</div><!-- /progress bar -->
+
+						</div>
+
+						<div class="col-lg-4">
+
+							<div class="heading-title heading-border-bottom">
+								<h3>Not Convince ?</h3>
+							</div>
+							
+							<p> We are number one in the commercial industry. The biggest company are trusting us and none has been unsatisfied. Register now !</p>
+							
+							<%= link_to "", '/gform', :method => :get %><a href="gform.html" class="btn btn-default btn-block btn-lg">FREE QUOTE</a>
+							
+						</div>
+
+					</div>
+
+
+				</div>
+			</section>
+			<!-- /VISION/SKILL/SPECIAL -->
+
+
+
+			<!-- WORK -->
+
+
+
+					<!-- PORTFOLIO -->
+
+					<!-- /PORTFOLIO -->
+
+					<!-- CONTACT US -->
+
+					<!-- /CONTACT US -->
+
+			<!-- /WORK -->
+
+
+
+			<!-- TEAM -->
+			<section id="team">
+				<div class="container">
+
+					<header class="text-center mb-60">
+						<h2>Our Team</h2>
+						<p class="lead font-lato">The best team in the industry !</p>
+						<hr />
+					</header>
+
+					<p class="lead"> We have the most competent team in the industry. All ours employees are coming out of the best universities in the US.</p>
+
+					<div class="row">
+					
+						<!-- item -->
+						<div class="col-md-3 col-sm-6">
+
+							<div class="box-flip box-color box-icon box-icon-center box-icon-round box-icon-large text-center">
+								<div class="front">
+									<div class="box1 box-default">
+										<span class="box-icon-title">
+											<img class="img-fluid" src="https://pbs.twimg.com/profile_images/2653047987/516809cca4f2b021c867506185cb9b34_400x400.png" alt="" />
+											<h2>Nicolas Genest</h2>
+											<small>CEO</small>
+										</span>
+									</div>
+								</div>
+
+								<div class="back">
+									<div class="box2 box-default">
+										<h4 class="m-0">Nicolas Genest</h4>
+										<small>CEO</small>
+
+										<hr />
+
+										<p>CEO, since 2003, M.Genest is one of the greatest manager in the world ans has won several awards.</p>
+
+										<hr />
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!-- /item -->
+
+						<!-- item -->
+						<div class="col-md-3 col-sm-6">
+
+							<div class="box-flip box-color box-icon box-icon-center box-icon-round box-icon-large text-center">
+								<div class="front">
+									<div class="box1 box-default">
+										<span class="box-icon-title">
+											<img class="img-fluid" src="https://scontent.fymy1-1.fna.fbcdn.net/v/t1.0-9/27750473_10156095778734362_3081375480509664758_n.jpg?_nc_cat=108&_nc_ht=scontent.fymy1-1.fna&oh=7c42209ba73b22058c528ec5b1cd319b&oe=5CF4F09D" alt="" />
+											<h2>Philippe Bouillon</h2>
+											<small>Sales Manager</small>
+										</span>
+									</div>
+								</div>
+
+								<div class="back">
+									<div class="box2 box-default">
+										<h4 class="m-0">Philippe Bouillon</h4>
+										<small>Sales Manager</small>
+
+										<hr />
+
+										<p>The best seller in the market. He could convince an Inuit to buy a refrigerator !</p>
+
+										<hr />
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!-- /item -->
+
+						<!-- item -->
+						<div class="col-md-3 col-sm-6">
+
+							<div class="box-flip box-color box-icon box-icon-center box-icon-round box-icon-large text-center">
+								<div class="front">
+									<div class="box1 box-default">
+										<span class="box-icon-title">
+											<img class="img-fluid" src="https://scontent.fymy1-2.fna.fbcdn.net/v/t1.0-9/10556359_10155306521440424_642446950452050018_n.jpg?_nc_cat=101&_nc_ht=scontent.fymy1-2.fna&oh=9d0c4cb6c0c845ab2e1fd8a64d423332&oe=5CBAD20B" alt="" />
+											<h2>Marc-Antoine Tanguay</h2>
+											<small>Web Developer</small>
+										</span>
+									</div>
+								</div>
+
+								<div class="back">
+									<div class="box2 box-default">
+										<h4 class="m-0">Marc-Antoine Tanguay</h4>
+										<small>Web Developer</small>
+
+										<hr />
+
+										<p>Marc has graduate from Codeboxx school of technologie and he is ready to take the biggest challenge.</p>
+
+										<hr />
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!-- /item -->
+						<div class="col-md-3 col-sm-6">
+
+								<div class="box-flip box-color box-icon box-icon-center box-icon-round box-icon-large text-center">
+									<div class="front">
+										<div class="box1 box-default">
+											<span class="box-icon-title">
+												<img class="img-fluid" src="https://media.licdn.com/dms/image/C5603AQFmu_gCXYmprg/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=i1wq2kQRK3UgfUshCX24EbOzhCUFPFVlCSH2MJRYI7k" alt="" />
+												<h2>Nadya Fortier</h2>
+												<small>COO</small>
+											</span>
+										</div>
+									</div>
+	
+									<div class="back">
+										<div class="box2 box-default">
+											<h4 class="m-0">Nadya Fortier</h4>
+											<small>C)O</small>
+	
+											<hr />
+	
+											<p>Nadya is the most organized person in the world. You can give her your project and she will handle it like a champ !</p>
+	
+											<hr />
+	
+										</div>
+									</div>
+								</div>
+	
+							</div>
+
+						<!-- item -->
+
+						<!-- /item -->
+
+					</div>
+
+				</div>
+			</section>
+			<!-- /TEAM -->
+
+
+
+			<!-- CALLOUT -->
+
+			<!-- /CALLOUT -->
+
+
+
+			<!-- SERVICES -->
+
+			<!-- /SERVICES -->
+
+
+
+			<!-- PRICING -->
+
+			<!-- /PRICING -->
+
+
+
+			<!-- PARALLAX -->
+
+			<!-- /PARALLAX -->
+
+
+
+			<!-- TESTIMONIALS -->
+
+			<!-- /TESTIMONIALS -->
+
+
+
+			<!-- CONTACT -->
+
+			<!-- /CONTACT -->
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+					<div class="container">
+	
+	
+						<div class="row">
+	
+							<!-- col #1 -->
+							<div class="col-md-8">
+	
+								<h3 class="letter-spacing-1">WHY ROCKET ELEVATORS ?</h3>
+	
+								<!-- Small Description -->
+								<p>
+									We are number one in construction of elevator in North America and second in Europe. We have the most efficient workers and our values are the customer service, 
+									fidelity and respect. Contact us and we guarantee that you will completely satisfy. 
+								</p>
+								<h2>1-800-555-1234</h2>
+							</div>
+							<!-- /col #1 -->
+	
+						</div>
+	
+					</div>
+	
+					<div class="copyright">
+						<div class="container">
+							&copy; All Rights Reserved, Rocket Elevators
+						</div>
+					</div>
+	
+				</footer>
+			<!-- /FOOTER -->
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+
+
+		<!-- JAVASCRIPT FILES -->
+
+		<!-- STYLESWITCHER - REMOVE -->
+	
+
+		<!-- PAGELEVEL SCRIPTS -->
+	

@@ -1,0 +1,663 @@
+<%= form_with(model: quote, local: true) do |form| %>
+    <% if quote.errors.any? %>
+    <div id="error_explanation">
+    <h2><%= pluralize(quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
+    
+    <ul>
+    <% quote.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+    </div>
+    <% end %>
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Form - Rocket Evelators</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- REVOLUTION SLIDER -->
+		<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		<link href="assets/css/rocket2.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		<link rel="shortcut icon" href="demo_files/images/R2.png" type="image/x-icon" />
+
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+		<!-- SLIDE TOP -->
+		<div id="slidetop">
+
+			<div class="container">
+				
+				<div class="row">
+
+					<div class="col-md-4">
+						<h6><i class="icon-heart"></i> WHY ROCKET ELEVATORS ?</h6>
+						<p>We are number one in construction of elevator in North America and second in Europe. We have the most efficient workers and our values are the customer service, fidelity and respect. Contact us and we guarantee that you will completely satisfy.
+
+						</p>
+					</div>
+
+					<div class="col-md-4">
+						<h6><i class="icon-envelope"></i> CONTACT INFO</h6>
+						<ul class="list-unstyled">
+							<li><b>Address:</b> 725 Boulevard Lebourgneuf <br /> Quebec, G2J 0C4, Canada</li>
+							<li><b>Phone:</b> 1-800-565-2390</li>
+							<li><b>Email:</b> <a href="mailto:support@yourname.com">support@codeboxx.com</a></li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+
+			<a class="slidetop-toggle" href="#"><!-- toggle button --></a>
+
+		</div>
+		<!-- /SLIDE TOP -->
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+				.clearfix		= required for mobile menu, do not remove!
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+
+						<a class="logo float-left scrollTo" href="#top">
+							<img src="assets/R2.png" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li class="active"><!-- HOME -->
+										<a href="genesis.html">
+											HOME
+										</a>
+									</li>
+									<li><!-- SERVICES -->
+										<a class="dropdown-toogle">
+											SERVICES
+
+										</a>
+										<ul class="dropdown-menu">
+											<li>
+												<a href="index-onepage-parallax.html">Residential</a>
+											</li>
+											<li>
+												<a href="index-onepage-parallax-commercial.html">Commercial</a>
+											</li>
+										</ul>
+										
+									</li>
+									<li><!-- WORK -->
+										<a href="genesis.html#work">
+											PORTFOLIO
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="genesis.html#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- OVERVIEW -->
+										<a href="genesis.html#contact">
+											CONTACT
+										</a>
+									</li>
+									<li><!-- CLIENTS -->
+										<a href="genesis.html#clients">
+											CLIENTS
+										</a>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+
+			<!-- REVOLUTION SLIDER -->
+
+
+			<!-- /REVOLUTION SLIDER -->
+
+
+			<hr class="m-0" /><!-- 1px line separator -->
+
+
+			<!-- BLUE BUTTON CALLOUT 
+			<a href="#" class="btn btn-xlg btn-primary fs-30 fullwidth m-0 rad-0 p-40">
+					<button>Awards and Projects </button>
+					<button>Residential's services</button>
+					<button>Corporate's services</button>
+			</a>-->
+
+			<!-- /BUTTON CALLOUT -->
+			
+			<!-- Services -->
+
+			<!-- /Services -->
+
+
+			<!-- Parallax -->
+
+			<!-- /Parallax -->
+
+			<!-- PORTFOLIO -->
+
+			<!-- /PORTFOLIO -->
+
+
+
+
+			<!-- Testimonials -->
+
+			<!-- /Testimonials -->
+
+
+
+
+
+			<!-- News -->
+
+			<!-- /News -->
+
+
+
+
+			<!-- Overview -->
+			<!-- /Overview -->
+
+
+
+
+
+			<!-- Clients -->
+
+			<!-- /Clients -->
+
+
+
+
+			<!-- CONTACT -->
+			<section id="contact">
+				<div class="container">
+
+					<header class="text-center mb-60-1">
+						<h2>Submission</h2>
+						<p class="lead font-lato">Get a free submission now.</p>
+						<hr />
+					</header>
+
+
+					<div class="row">
+
+						<!-- FORM -->
+						<div class="col-md-8 col-sm-8">
+
+							<h3>Enter your informations </h3>
+
+							
+							<!--
+								MESSAGES
+								
+									How it works?
+									The form data is posted to php/contact.php where the fields are verified!
+									php.contact.php will redirect back here and will add a hash to the end of the URL:
+										#alert_success 		= email sent
+										#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
+										#alert_mandatory	= email not sent - required fields empty
+										Hashes are handled by assets/js/contact.js
+									Form data: required to be an array. Example:
+										contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
+										Also, add `required` to input fields if is a mandatory field. 
+										Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
+									PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
+												 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
+									WARNING! Do not change the `email` and `name`!
+												contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+												contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+							-->
+
+							<!-- Alert Success -->
+							<div id="alert_success" class="alert alert-success mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>Thank You!</strong> Your message successfully sent!
+							</div><!-- /Alert Success -->
+
+
+							<!-- Alert Failed -->
+							<div id="alert_failed" class="alert alert-danger mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>[SMTP] Error!</strong> Internal server error!
+							</div><!-- /Alert Failed -->
+
+
+							<!-- Alert Mandatory -->
+							<div id="alert_mandatory" class="alert alert-danger mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+							</div><!-- /Alert Mandatory -->
+
+<!-------------------------FORM DEBUT------------------------------------------------------>
+
+							<form action="php/contact.php" method="post" enctype="multipart/form-data">
+								<fieldset>
+                                    <input type="hidden" name="action" value="contact_send" />
+                                <div class="row">
+                                    <div class="col-md-3">
+                                            <%= form.label :Department %>
+                                            <%= form.select :Department, [['Residential','Residential'], ['Commercial','Commercial'], ['Corporate','Corporate'], ['Hybrid','Hybrid']] %>
+                                        </div>
+                                    </div>
+                                    <div class="row-1">
+										<form>
+                                            <div class="col-md-4">
+                                                    <label class="resi" for="resi-app">Number of appartements * <span class="resi-a">Exclude basements</span></label>
+                                                    <input required type="text" value="" class="form-control-1" name="resi[app]" id="resi-app">
+                                                </div>
+                                            <div class="col-md-4">
+                                                    <label for="resi-floor">Number of floors *</label>
+                                                    <input required type="text" value="" class="form-control-1" name="resi[floor]" id="resi-floor">
+                                            </div>
+                                                <div class="col-md-4">
+                                                    <label for="resi-quar">Number of basements</label>
+                                                    <input required type="text" value="" placeholder="Not Required" class="form-control-1" name="resi[quar]" id="resi-quar">
+                                                </div>
+										</form>	
+                                    </div>
+									<div class="row-2">
+										
+                                            <div class="col-md-4">
+                                                    <label for="contact:name">Number of ascensors *</label>
+                                                    <input required type="text" value="" class="form-control-4" name="contact[name][required]" id="com-asce">
+                                                </div>
+                                            <div class="col-md-4">
+                                                    <label for="contact:name">Number of appartements </label>
+                                                    <input required type="text" value="" placeholder="Not Required" class="form-control-4" name="contact[name][required]" id="com-app">
+                                            </div>
+                                                <div class="col-md-4">
+                                                    <label for="contact:name">Number of parking spaces </label>
+                                                    <input required type="text" value="" placeholder="Not Required" class="form-control-4" name="contact[name][required]" id="com-space">
+                                                </div>
+                                            <div class="col-md-4">
+                                                        <label for="contact:name">Number of basements </label>
+                                                        <input required type="text" value="" placeholder="Not Required" class="form-control-4" name="contact[name][required]" id="com-quar">
+                                            </div>
+                                            <div class="col-md-4">
+                                                    <label for="contact:name">Number of stores </label>
+                                                    <input required type="text" value="" placeholder="Not Required" class="form-control-4" name="contact[name][required]" id="com-com">
+												</div>
+							
+													
+                                    </div>
+
+                                    <div class="row-3">
+                                            <div class="col-md-4">
+													<label class="resi" for="contact:name">Number of floors * <br>
+														<span class="resi-a">Exclude basements</span></label>
+                                                    <input required type="text" value="" class="form-control-2" name="contact[name][required]" id="cor-floor">
+                                                </div>
+                                            <div class="col-md-4">
+                                                    <label for="contact:name"> Numbers of basements *</label>
+                                                    <input required type="text" value="" class="form-control-2" name="contact[name][required]" id="cor-quar">
+                                            </div>
+                                                <div class="col-md-4">
+                                                    <label for="contact:name">Max ocuppancy by floor *</label>
+                                                    <input required type="text" value="" class="form-control-2" name="contact[name][required]" id="cor-occu">
+                                             </div>
+                                                <div class="col-md-4">
+                                                        <label for="contact:name">Number of commerces</label>
+                                                        <input required type="text" value="" placeholder="Not Required" class="form-control-2" name="contact[name][required]" id="cor-com-">
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                        <label for="contact:name">Parking spaces</label>
+                                                        <input required type="text" value="" placeholder="Not Required" class="form-control-2" name="contact[name][required]" id="cor-space">
+                                                </div>
+
+                                    </div>
+									<div class="row-4">
+                                            <div class="col-md-4">
+													<label class="resi" for="hyb-floor">Number of floors * <br>
+														<span class="resi-a">Exclude Basements</span></label>
+                                                    <input required type="text" value="" class="form-control-3" name="hyb-floor" id="hyb-floor">
+                                                </div>
+                                            <div class="col-md-4">
+                                                    <label for="hyb-quar"> Number of basements *</label>
+                                                    <input required type="text" value="" class="form-control-3" name="hyb-quar" id="hyb-quar">
+                                            </div>
+                                                <div class="col-md-4">
+                                                    <label for="hyb-occu"> Max ocuppancy by floor *</label>
+                                                    <input required type="text" value="" class="form-control-3" name="hyb-occu" id="hyb-occu">
+                                                </div>
+                                                <div class="col-md-4">
+                                                        <label for="hyb-space">Parking Spaces </label>
+                                                        <input required type="text" value="" placeholder="Not Required" class="form-control-3" name="hyb-space" id="hyb-space">
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                        <label for="hyb-com">Number of commerces</label>
+                                                        <input required type="text" value="" placeholder="Not Required" class="form-control-3" name="hyb-com" id="hyb-com">
+                                                </div>
+                                                <div class="col-md-4">
+                                                        <label for="hyb-hour">Hours of Activity(max 24h)</label>
+                                                        <input required type="number" min="1" max="24" value="" placeholder="Not Required" class="form-control-3" name="hyb-hour" id="hyb-hour">
+                                            </div>
+                                        
+                                    </div>
+                                        
+                                    <div class="row">
+                                        <div class="col-md-4-1">
+                                        <form id="radio">
+											<label class="label_form" for="radio-button">Service level *</label>
+											<hr class="hr-1">
+											<input type="radio" name="price" value="1" checked="checked"> Standard<br>
+											<hr class="hr-1">
+											<input type="radio" name="price" value="2"> Premium<br>
+											<hr class="hr-1">
+											<input type="radio" name="price" value="3"> Excellium
+											<hr class="hr-1">
+                                        </form>
+                                        </div>
+                                    </div>
+                                    
+								</fieldset>
+
+							</form>
+
+						</div>
+						<!-- /FORM -->
+
+						<!-- INFO -->
+						<div class="col-md-4 col-sm-4">
+
+                                <!-- PAYMENT METHOD -->
+                                <!-- /PAYMENT METHOD -->
+    
+    
+                                <!-- CREDIT CARD PAYMENT -->
+
+                                <!-- /CREDIT CARD PAYMENT -->
+    
+    
+                                <!-- TOTAL / PLACE ORDER -->
+                                <div class="toggle-transparent toggle-bordered-full clearfix">
+                                    <div class="toggle active">
+                                        <div class="toggle-content-1" style="display: block;">
+                                            
+                                            <span class="clearfix">
+                                                <strong class="float-left">Total ascensors:</strong>
+                                                <span id="float-right-1"></span>
+                                            </span>
+    
+                                            <hr>
+    
+                                            <span class="clearfix">
+                                                <span id="float-right-2"></span>
+                                                <strong class="float-left">Standard price unit:</strong><br>
+                                                <span>Installation fee:</span>
+                                                <span id="fees"></span>
+                                            </span>
+    
+                                            <hr>
+                                            <span class="clearfix">
+                                                    <span id="float-right-3"></span>
+													<strong class="float-left">Approximate price:</strong>
+													<span id="float-right-3"></span>
+                                            </span>
+                                            <hr>
+    
+                                            <a class="btn btn-primary btn-lg btn-block fs-15" href=genesis.html#contact><i class="fa fa-mail-forward"></i> Contact Us Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- /TOTAL / PLACE ORDER -->
+                                        
+    
+                                <h2 id = "visit-us">Visit Us</h2>
+
+                                <!-- 
+                                Available heights
+                                    h-100
+                                    h-150
+                                    h-200
+                                    h-250
+                                    h-300
+                                    h-350
+                                    h-400
+                                    h-450
+                                    h-500
+                                    h-550
+                                    h-600
+                                -->
+                                <div id="map2" class="h-0 grayscale"></div>
+    
+                                <hr />
+    
+                                <p>
+                                    <span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 725 Boulevard Lebourgneuf, Québec, QC G2J 0C4 </span>
+                                    <span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1800-555-1234">1-800-555-1234</a></span>
+                                    <span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:mail@yourdomain.com">support@codeboxx.com</a></span>
+                                </p>
+                                    
+
+                        </div>
+
+
+                                </div>
+                            </div>
+                            <!-- /CREATE ACCOUNT -->
+    
+                        
+                        <!-- /CHECKOUT -->
+                        
+                    </div>
+						<!-- /INFO -->
+                        
+					</div>
+
+				</div>
+			</section>
+			<!-- /CONTACT -->
+
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+
+					<div class="row">
+
+						<!-- col #1 -->
+						<div class="col-md-8">
+
+							<h3 class="letter-spacing-1">WHY ROCKET ELEVATORS ?</h3>
+
+							<!-- Small Description -->
+							<p>
+								We are number one in construction of elevator in North America and second in Europe. We have the most efficient workers and our values are the customer service, 
+								fidelity and respect. Contact us and we guarantee that you will completely satisfy. 
+							</p>
+							<h2>1-800-555-1234</h2>
+						</div>
+						<!-- /col #1 -->
+
+						<!-- col #2 -->
+						<div class="col-md-4">
+							<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+							<!-- Newsletter Form -->
+							<p>Subscribe to Our Newsletter to get Important News from Rocket Elevators ! </p>
+
+							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+									<span class="input-group-btn">
+										<button class="btn btn-primary" type="submit">Subscribe</button>
+									</span>
+								</div>
+							</form>
+							<!-- /Newsletter Form -->
+
+
+						</div>
+						<!-- /col #2 -->
+
+					</div>
+
+				</div>
+
+				<div class="copyright">
+					<div class="container">
+						&copy; All Rights Reserved, Rocket Elevators
+					</div>
+				</div>
+
+			</footer>
+			<!-- /FOOTER -->
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+        <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/contact.js"></script>
+		
+		<!-- STYLESWITCHER - REMOVE -->
+	
+
+		<!-- REVOLUTION SLIDER -->
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="assets/js/view/demo.revolution_slider.js"></script>
+
+		<!-- PAGELEVEL SCRIPTS -->
+		<script src="assets/js/contact.js"></script>
+
+		<!-- 
+			GMAP.JS 
+			http://hpneo.github.io/gmaps/
+		-->
+
+		<script>
+		
+		</script>
+	</body>
+</html>

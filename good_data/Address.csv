@@ -1,0 +1,201 @@
+id,address_type,status,entity,number_street,apt_number,city,postal_code,country,notes
+1,Business,Active,Customer,"046 Mccormick Road",,Washington,20546,"United States","Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+2,Shipping,Innactive,Customer,"606 Annamark Hill",2,"Salt Lake City",84105,"United States","Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui."
+3,Billing,Active,Building,"42349 Lillian Place",,Jackson,39282,"United States","In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus."
+4,Billing,Active,Customer,"22 Kingsford Pass",4,Picton,S0H,Canada,"Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat."
+5,Billing,Innactive,,"09 Anderson Junction",,Tacoma,98442,"United States",
+6,Business,Active,,"5 Bultman Street",,"Bowen Island",V7W,Canada,
+7,Home,Active,,"4054 Stone Corner Center",,Oromocto,E2V,Canada,
+8,Billing,Active,Building,"612 Dottie Circle",,"Fort Pierce",34981,"United States","Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros."
+9,Business,Innactive,Building,"0 Kennedy Way",9,Stamford,06912,"United States","Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus."
+10,Billing,Innactive,,"3211 Old Shore Lane",,Markham,L6E,Canada,
+11,Home,Active,Customer,"294 Maryland Parkway",,"Battle Creek",49018,"United States","Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque."
+12,Home,Active,Customer,"3 Tennessee Hill",,Casselman,G8A,Canada,"Phasellus in felis. Donec semper sapien a libero. Nam dui."
+13,Billing,Active,Customer,"0678 Corscot Terrace",,"Las Vegas",89166,"United States","Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio."
+14,Home,Innactive,Customer,"63019 Portage Trail",14,Tucson,85715,"United States","Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem."
+15,Billing,Active,,"8417 Haas Pass",,"West Palm Beach",33416,"United States",
+16,Home,Innactive,Building,"2523 Clove Terrace",16,Marietta,30061,"United States","Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam."
+17,Business,Active,Customer,"4055 Sullivan Road",17,Boisbriand,J7G,Canada,"Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius."
+18,Billing,Innactive,Customer,"4568 Bunting Park",18,"Meadow Lake",S9X,Canada,"Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero."
+19,Business,Active,Customer,"11 Morning Road",19,Memphis,38188,"United States","Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem."
+20,Billing,Innactive,Building,"89096 Coolidge Road",,"Los Angeles",90030,"United States","Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis."
+21,Billing,Innactive,,"018 Novick Place",,Columbus,31998,"United States",
+22,Home,Innactive,Customer,"4906 Bartelt Street",22,Prévost,T7Z,Canada,"Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam."
+23,Billing,Innactive,Building,"56 Corscot Hill",,Pasadena,B2J,Canada,"Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst."
+24,Home,Innactive,Customer,"3656 Kings Alley",,Springfield,62705,"United States","Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem."
+25,Business,Active,,"08 Sutherland Park",,Gibsons,L6R,Canada,
+26,Billing,Innactive,Building,"782 Grasskamp Road",,Nanton,L5M,Canada,"Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat."
+27,Billing,Active,Customer,"47017 Burrows Avenue",,Reading,19610,"United States","Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros."
+28,Business,Active,,"6098 Brown Alley",,Warren,44485,"United States",
+29,Shipping,Active,,"45982 Transport Way",,Brampton,L7A,Canada,
+30,Shipping,Innactive,,"6677 Starling Hill",,Washington,20238,"United States",
+31,Home,Active,Building,"05615 Macpherson Junction",31,Washington,20220,"United States","Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat."
+32,Billing,Innactive,,"8638 Scott Way",,"High Prairie",L8N,Canada,
+33,Billing,Active,Building,"1 Marcy Terrace",,Brooklyn,11254,"United States","Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede."
+34,Shipping,Active,Customer,"49 Green Alley",,Augusta,30905,"United States","Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat."
+35,Home,Active,Building,"59665 Melby Street",,Tallahassee,32314,"United States","Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem."
+36,Business,Active,Customer,"713 Grover Alley",,Metchosin,V9C,Canada,"Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+37,Business,Active,Customer,"14 Vera Point",,Dallas,75342,"United States","Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi."
+38,Business,Innactive,,"58 Butternut Point",,Reno,89519,"United States",
+39,Billing,Innactive,,"00252 Crownhardt Place",,Springfield,62756,"United States",
+40,Billing,Active,Building,"29 Dryden Road",,Camlachie,G5Z,Canada,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus."
+41,Business,Active,,"34 Becker Way",,"Oklahoma City",73124,"United States",
+42,Shipping,Active,Building,"013 Westerfield Road",42,"Las Vegas",89193,"United States","Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus."
+43,Business,Active,Building,"2362 North Crossing",43,"El Paso",88514,"United States","Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio."
+44,Shipping,Active,,"9 Rigney Terrace",44,Philadelphia,19172,"United States",
+45,Shipping,Innactive,Customer,"47697 Bunting Park",45,Mont-Royal,H5B,Canada,"Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem."
+46,Home,Active,,"0 Drewry Court",,"Las Vegas",89160,"United States",
+47,Home,Innactive,,"66135 La Follette Park",47,"Little Current",J6A,Canada,
+48,Shipping,Innactive,Customer,"266 Autumn Leaf Trail",,Birmingham,35290,"United States","Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem."
+49,Billing,Active,,"27 Grayhawk Place",,Columbus,43210,"United States",
+50,Shipping,Active,Customer,"86 Nobel Center",,Belfast,L6S,Canada,"Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh."
+51,Home,Active,,"13 Fulton Terrace",,Portland,97255,"United States",
+52,Home,Innactive,Building,"2331 Algoma Park",,Littleton,80126,"United States","Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus."
+53,Home,Active,Customer,"5 Forest Dale Center",,Detroit,48206,"United States","Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem."
+54,Business,Active,Customer,"4 Cardinal Lane",54,Toronto,M7A,Canada,"Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst."
+55,Home,Active,Building,"387 Marcy Plaza",,Bakersfield,93311,"United States","Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero."
+56,Shipping,Innactive,Customer,"02 Tomscot Court",56,Denver,80279,"United States","Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis."
+57,Shipping,Innactive,,"724 Esch Place",57,"New Bedford",02745,"United States",
+58,Business,Active,,"90120 Schurz Avenue",,Springfield,01105,"United States",
+59,Home,Innactive,Building,"7 Loomis Road",,Scottsdale,85271,"United States","Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus."
+60,Business,Active,Customer,"18907 Knutson Circle",60,Manassas,22111,"United States","Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti."
+61,Shipping,Active,Customer,"09 Rowland Park",,Honolulu,96850,"United States","Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam."
+62,Billing,Innactive,,"10374 Spaight Point",,Montréal-Ouest,H5B,Canada,
+63,Home,Active,,"09 Brickson Park Street",,Oshawa,L1K,Canada,
+64,Billing,Active,Customer,"53 Northland Junction",,"Saint Paul",55108,"United States","Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi."
+65,Home,Active,Building,"03 Old Shore Drive",,Alexandria,71307,"United States","In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet."
+66,Shipping,Active,Customer,"78 Westridge Street",,Lafayette,70505,"United States","Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio."
+67,Business,Active,,"1238 Clarendon Center",67,Boise,83727,"United States",
+68,Shipping,Innactive,Customer,"7 School Road",,Wabana,V7X,Canada,"In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus."
+69,Billing,Active,,"8511 Paget Center",69,"Lambton Shores",J5T,Canada,
+70,Billing,Innactive,Building,"92 Packers Center",70,Manning,V3A,Canada,"In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo."
+71,Billing,Innactive,Building,"9 Summer Ridge Court",,Shediac,E4P,Canada,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus."
+72,Business,Innactive,,"05 Blaine Road",,"Oklahoma City",73124,"United States",
+73,Billing,Innactive,Customer,"5976 Summerview Lane",,Lincoln,68517,"United States","Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh."
+74,Home,Active,Customer,"2 Mendota Road",74,Scottsdale,85271,"United States","Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque."
+75,Business,Active,,"0 Clyde Gallagher Pass",,Gibbons,M1E,Canada,
+76,Home,Innactive,Customer,"5189 Northport Avenue",76,Brampton,L7A,Canada,"Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat."
+77,Home,Innactive,,"69546 Northview Hill",77,Washington,20078,"United States",
+78,Shipping,Innactive,Building,"94335 Autumn Leaf Pass",78,Salaberry-de-Valleyfield,J3Y,Canada,"Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem."
+79,Billing,Active,,"05394 Cherokee Center",79,Raleigh,27635,"United States",
+80,Business,Active,Building,"796 Caliangt Terrace",,Atlanta,30343,"United States","In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus."
+81,Billing,Innactive,Building,"81 Emmet Street",,Aurora,60505,"United States","Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat."
+82,Home,Innactive,Customer,"6430 Holy Cross Point",82,Pangnirtung,M5T,Canada,"Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+83,Shipping,Innactive,,"12 Sherman Drive",,"Otterburn Park",L6G,Canada,
+84,Business,Active,Customer,"536 Logan Center",,"Corpus Christi",78405,"United States","Fusce consequat. Nulla nisl. Nunc nisl."
+85,Business,Innactive,Customer,"554 Northridge Alley",85,"High River",T1V,Canada,"Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem."
+86,Business,Active,,"4 Iowa Pass",,Merritt,V1K,Canada,
+87,Billing,Active,,"33 Pearson Lane",,Wilmington,28410,"United States",
+88,Home,Innactive,Customer,"8522 Larry Avenue",88,Honolulu,96825,"United States","Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus."
+89,Business,Active,,"3838 Spenser Plaza",,Evansville,47737,"United States",
+90,Business,Innactive,Customer,"732 Northview Place",,"New Orleans",70179,"United States","Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat."
+91,Home,Innactive,Building,"2565 Pepper Wood Terrace",,"Simi Valley",93094,"United States","Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+92,Shipping,Active,,"83812 Ryan Terrace",,"New York City",10045,"United States",
+93,Shipping,Innactive,Customer,"488 Forest Dale Center",,"Wilkes Barre",18706,"United States","Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit."
+94,Billing,Active,Building,"5 Hoffman Place",,Wingham,T5K,Canada,"Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem."
+95,Billing,Innactive,,"86054 East Road",95,"El Paso",88514,"United States",
+96,Billing,Active,Building,"818 David Hill",,Akron,44310,"United States","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus."
+97,Business,Innactive,Building,"5 Thackeray Avenue",,"Boca Raton",33499,"United States","Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst."
+98,Shipping,Active,,"40385 Larry Junction",,Sacramento,94263,"United States",
+99,Billing,Innactive,,"7 Paget Way",,Rochester,14619,"United States",
+100,Billing,Innactive,,"27 Magdeline Avenue",,Orangeville,T1J,Canada,
+101,Billing,Active,Building,"3 Raven Center",,Collingwood,L9Y,Canada,"Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh."
+102,Shipping,Active,,"77 Oneill Lane",,Orlando,32830,"United States",
+103,Home,Innactive,Building,"15 Carpenter Crossing",,Montréal-Ouest,H5B,Canada,"Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+104,Business,Innactive,,"88 Huxley Parkway",,Kitchener,N2R,Canada,
+105,Business,Innactive,Customer,"469 Troy Plaza",,Midland,79710,"United States","Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl."
+106,Home,Innactive,Building,"6382 Texas Avenue",,Princeville,G6G,Canada,"Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus."
+107,Billing,Innactive,Customer,"3126 Truax Lane",,Alexandria,22309,"United States","Fusce consequat. Nulla nisl. Nunc nisl."
+108,Business,Innactive,,"75616 Westerfield Circle",,LÎle-Perrot,H9X,Canada,
+109,Shipping,Active,Building,"441 6th Point",,Albany,12205,"United States","Sed ante. Vivamus tortor. Duis mattis egestas metus."
+110,Home,Innactive,,"633 Kim Alley",,"Kirkland Lake",P2N,Canada,
+111,Billing,Innactive,,"0 Saint Paul Court",,Charleston,25362,"United States",
+112,Home,Active,,"155 Badeau Center",112,Richmond,V6Z,Canada,
+113,Billing,Active,,"13580 Burning Wood Drive",,Lloydminster,S9V,Canada,
+114,Billing,Active,,"316 Jenna Pass",,Saint-Sauveur,J0R,Canada,
+115,Billing,Innactive,,"20572 Crowley Terrace",,Saint-Bruno-de-Guigues,G6B,Canada,
+116,Business,Active,,"536 Randy Way",,Fresno,93726,"United States",
+117,Billing,Innactive,,"49 Karstens Park",117,Orlando,32868,"United States",
+118,Billing,Active,,"88347 Browning Road",,Cincinnati,45999,"United States",
+119,Home,Active,,"97 American Ash Lane",119,Columbus,43231,"United States",
+120,Home,Innactive,Customer,"78281 Armistice Point",,Normandin,G0H,Canada,"Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh."
+121,Shipping,Innactive,Customer,"62 Magdeline Court",,Tulsa,74103,"United States","Phasellus in felis. Donec semper sapien a libero. Nam dui."
+122,Business,Active,Building,"291 Straubel Parkway",,Boston,02203,"United States","Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui."
+123,Billing,Active,Building,"82 Walton Court",,"San Francisco",94110,"United States","Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem."
+124,Billing,Active,Building,"81 Dayton Lane",,Saginaw,48604,"United States","Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst."
+125,Billing,Active,,"5 Bartelt Hill",,Gatesville,76598,"United States",
+126,Business,Innactive,,"040 Forest Dale Drive",126,Reston,20195,"United States",
+127,Shipping,Active,,"033 Algoma Place",127,"Saint Louis",63180,"United States",
+128,Business,Innactive,Building,"52 Cottonwood Circle",128,Dayton,45432,"United States","In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus."
+129,Home,Active,,"44424 Roth Road",,"Oklahoma City",73124,"United States",
+130,Business,Active,Customer,"9 Colorado Terrace",130,Salinas,93907,"United States","Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam."
+131,Billing,Active,,"32090 Little Fleur Center",131,Camrose,T4V,Canada,
+132,Home,Active,,"3407 Drewry Parkway",,Irvine,92619,"United States",
+133,Billing,Innactive,,"141 Sommers Lane",133,Louisville,40293,"United States",
+134,Home,Active,Customer,"04966 Red Cloud Pass",,Peoria,61635,"United States","Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst."
+135,Home,Active,Building,"81268 Moland Drive",,Vegreville,T9C,Canada,"Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus."
+136,Shipping,Innactive,,"83148 Sachtjen Crossing",,Peoria,61635,"United States",
+137,Billing,Innactive,,"3256 Logan Plaza",,Papineauville,G5N,Canada,
+138,Shipping,Innactive,Customer,"78 Grover Lane",138,Austin,78737,"United States","Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum."
+139,Home,Innactive,Building,"81102 Schiller Terrace",,Nicolet,J3T,Canada,"Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem."
+140,Business,Active,,"79 Northridge Center",140,"New York City",10105,"United States",
+141,Business,Active,Customer,"61043 Mendota Way",,Omaha,68134,"United States","Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem."
+142,Business,Active,,"330 Petterle Point",,Springfield,62756,"United States",
+143,Shipping,Innactive,Building,"27098 Cherokee Hill",143,Provo,84605,"United States","In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet."
+144,Billing,Innactive,,"8 Roth Lane",,Atlanta,30328,"United States",
+145,Business,Active,Customer,"2406 Meadow Vale Drive",,Lexington,40524,"United States","Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis."
+146,Home,Active,Customer,"09 Saint Paul Avenue",,Baie-DUrfé,H9X,Canada,"Sed ante. Vivamus tortor. Duis mattis egestas metus."
+147,Business,Innactive,Building,"57 Kensington Crossing",147,Arlington,22205,"United States","Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat."
+148,Billing,Active,,"66 Killdeer Terrace",148,"Lac du Bonnet",H4S,Canada,
+149,Billing,Innactive,,"79268 Morningstar Alley",,Saint-Félicien,G8K,Canada,
+150,Business,Active,,"8 Acker Street",,Albuquerque,87201,"United States",
+151,Billing,Innactive,Customer,"191 Ramsey Way",,"Los Angeles",90076,"United States","Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus."
+152,Billing,Active,,"3806 Rigney Pass",,LÎle-Perrot,H9X,Canada,
+153,Billing,Innactive,,"9391 Butternut Road",,"Kingsey Falls",T8H,Canada,
+154,Billing,Innactive,,"0138 Mccormick Pass",,Peoria,61635,"United States",
+155,Billing,Innactive,Building,"831 Fallview Crossing",,Dorchester,E4K,Canada,"Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti."
+156,Billing,Innactive,,"43314 Dunning Crossing",,"New York City",10270,"United States",
+157,Business,Active,Building,"4 Wayridge Circle",157,Canton,44710,"United States","Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero."
+158,Home,Innactive,Building,"53620 Sullivan Way",,"New Orleans",70174,"United States","Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
+159,Home,Innactive,Building,"26674 Westport Way",159,Whittier,90610,"United States","Fusce consequat. Nulla nisl. Nunc nisl."
+160,Home,Innactive,,"9762 Marquette Center",160,Delaware,M3H,Canada,
+161,Business,Active,,"68 Delladonna Hill",,"Winston Salem",27150,"United States",
+162,Business,Innactive,Building,"843 Eagan Crossing",,"New York City",10125,"United States","Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+163,Business,Innactive,,"16 Canary Way",,Nashville,37215,"United States",
+164,Home,Active,Building,"163 Fisk Hill",164,Richmond,23289,"United States","Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque."
+165,Business,Innactive,Building,"77 Rusk Crossing",,Rayside-Balfour,G9T,Canada,"Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem."
+166,Shipping,Active,,"64 Hazelcrest Junction",166,Rochester,14604,"United States",
+167,Home,Innactive,,"2 Beilfuss Junction",,Seattle,98140,"United States",
+168,Billing,Innactive,Customer,"495 Bowman Road",168,Denver,80291,"United States","Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat."
+169,Billing,Innactive,Customer,"9476 Ridgeview Park",169,"Labrador City",A2V,Canada,"In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet."
+170,Business,Innactive,Building,"5 Bellgrove Terrace",,Spartanburg,29305,"United States","Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem."
+171,Business,Innactive,,"779 Lindbergh Alley",,Sainte-Marthe-sur-le-Lac,H9K,Canada,
+172,Home,Innactive,Building,"25 Mendota Hill",,"La Broquerie",L2G,Canada,"In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet."
+173,Home,Innactive,,"79804 Scofield Hill",,Shreveport,71105,"United States",
+174,Shipping,Active,,"199 Mandrake Crossing",,Kamloops,H9P,Canada,
+175,Business,Active,,"33157 Glacier Hill Trail",,"San Antonio",78205,"United States",
+176,Business,Innactive,Customer,"33619 Golf Alley",,Anniston,36205,"United States","Phasellus in felis. Donec semper sapien a libero. Nam dui."
+177,Business,Active,Customer,"57 Vermont Center",,"San Jose",95160,"United States","Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam."
+178,Business,Active,Building,"12 Twin Pines Crossing",,Lebel-sur-Quévillon,N2A,Canada,"Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
+179,Shipping,Innactive,Building,"08 Lake View Park",179,Nelson,V1L,Canada,"Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi."
+180,Billing,Active,,"4487 Rutledge Center",180,Philadelphia,19172,"United States",
+181,Shipping,Active,,"98 Melrose Junction",,Paterson,07522,"United States",
+182,Home,Innactive,Building,"26 Anthes Parkway",182,Mirabel,J5K,Canada,"Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst."
+183,Home,Innactive,Customer,"5 Kinsman Junction",,Syracuse,13205,"United States","Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio."
+184,Home,Active,,"600 Village Pass",,"Grand Rapids",49510,"United States",
+185,Billing,Active,,"92343 5th Way",,Omaha,68105,"United States",
+186,Shipping,Innactive,Building,"6 Becker Junction",,Vaughan,M3N,Canada,"Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis."
+187,Business,Innactive,,"39 Carberry Street",,"New Westminster",V4C,Canada,
+188,Business,Innactive,,"3114 Oneill Way",188,Newton,02162,"United States",
+189,Home,Active,Customer,"4721 Johnson Point",189,"Saint Louis",63121,"United States","Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est."
+190,Home,Innactive,,"7002 Gateway Avenue",,Windsor,J1S,Canada,
+191,Shipping,Active,,"97894 Surrey Center",,Birmingham,35290,"United States",
+192,Home,Active,,"94 Laurel Parkway",,"Staten Island",10310,"United States",
+193,Business,Innactive,,"92986 Cherokee Road",193,Campbellton,E3N,Canada,
+194,Business,Active,,"55 Novick Court",,Denver,80262,"United States",
+195,Shipping,Innactive,Building,"346 Nobel Court",195,"Las Vegas",89166,"United States","Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
+196,Billing,Innactive,,"4933 Surrey Place",196,Warwick,G6R,Canada,
+197,Business,Active,Building,"4 Hermina Court",,"San Antonio",78265,"United States","Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem."
+198,Business,Innactive,,"9117 Karstens Crossing",,Coaldale,T1M,Canada,
+199,Billing,Active,,"144 Magdeline Circle",199,Springfield,01114,"United States",
+200,Business,Active,Building,"817 Hazelcrest Drive",,"Pompano Beach",33064,"United States","Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
