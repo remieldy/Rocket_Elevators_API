@@ -30,3 +30,4 @@ log/development.log
 
 .vscode
 development.log
+sendgrid.env

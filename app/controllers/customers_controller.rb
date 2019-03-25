@@ -72,3 +72,17 @@ class CustomersController < ApplicationController
       params.fetch(:customer, {})
     end
 end
+
+class CustomerController < ApplicationController
+  def create
+    # Create the user from params
+    @customer = customer.new(params[:customer])
+    if @customer.save
+      # Deliver the signup email
+      CustomerNotifier.send_signup_email(@customer).deliver
+      redirect_to(@customer, :notice => 'customer created')
+    else
+      render :action => 'new'
+    end
+  end
+end

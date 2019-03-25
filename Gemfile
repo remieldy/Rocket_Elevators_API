@@ -20,6 +20,8 @@ gem 'bootstrap-sass', '~> 3.3.4'
 #
 gem 'font-awesome-sass', '~> 4.3.0'
 #
+gem 'sendgrid-ruby', '~> 5.3'
+#
 gem 'font-awesome-rails'
 #
 gem 'jquery-ui-rails'
@@ -53,6 +55,10 @@ gem 'chartkick', '~> 3.0', '>= 3.0.2'
 gem 'highcharts-rails', '~> 6.0', '>= 6.0.3'
 #
 gem 'groupdate', '~> 2.5', '>= 2.5.2'
+#
+
+
+
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

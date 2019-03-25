@@ -31,6 +31,25 @@ class LeadsController < ApplicationController
     if @customer != nil
         @lead.customer_id = @customer.id
     else @lead.customer_id = nil
+
+  def send_email
+      # using SendGrid's Ruby Library
+      # https://github.com/sendgrid/sendgrid-ruby
+  require 'sendgrid-ruby'
+  include SendGrid
+    from = Email.new(email: 'remieldy@hotmail.com')
+    to = Email.new(email: 'charlesHebert1995@hotmail.com')
+    subject = 'Sending with SendGrid is Fun'
+    content = Content.new(type: 'text/plain', value: 'and easy to do anywhere, even with Ruby')
+    mail = Mail.new(from, subject, to, content)
+  
+    sg = SendGrid::API.new(api_key: ENV['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'])
+    response = sg.client.mail._('send').post(request_body: mail.to_json)
+    puts response.status_code
+    puts response.body
+    puts response.headers
+    end
+
     respond_to do |format|
       if @lead.save
         format.html { redirect_to "/index#contact", alert: 'Lead was successfully created.' }
