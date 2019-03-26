@@ -38,6 +38,8 @@ class LeadsController < ApplicationController
       #{@lead.project_description}
       Attached Message: #{@lead.message}"})
 
+      sendgrid(@lead)
+
     respond_to do |format|
       if @lead.save
         format.html { redirect_to "/index#contact", alert: 'Lead was successfully created.' }
@@ -83,5 +85,37 @@ class LeadsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def lead_params
       params.require(:lead).permit(:full_name, :company_name, :email, :phone_number, :project_name, :project_description, :department_in_charge, :message, :attachment)
+    end
+    
+    def sendgrid(lead)
+      data = JSON.parse("{
+        \"personalizations\": [
+          {
+            \"to\": [
+              {
+                \"email\": \"#{lead.email}\" 
+              }
+            ],
+            \"dynamic_template_data\": {
+              \"subject\": \"Sending with SendGrid is Fun\",
+              \"full_name\": \"#{lead.full_name}\",
+              \"project_name\": \"#{lead.project_name}\"
+             
+            }
+          }
+        ],
+        \"from\": {
+          \"email\": \"support@codeboxx.com\"
+        },
+      \"template_id\": \"d-b5de3f29072e4708ba4ea62907aff5dd\"
+      }")
+      
+      sg = SendGrid::API.new(api_key: ENV['sengridApi_key'])
+      
+      response = sg.client.mail._('send').post(request_body: data)
+      # puts response.status_code
+      # puts response.body
+      # puts response.parsed_body
+      # puts response.headers
     end
 end

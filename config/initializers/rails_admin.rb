@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 RailsAdmin.config do |config|
 
   ### Popular gems integration
@@ -41,3 +42,45 @@ RailsAdmin.config do |config|
     # history_show
   end
 end
+=======
+RailsAdmin.config do |config|
+
+  ### Popular gems integration
+
+  # == Devise ==
+
+
+  ## == Cancan ==
+  # config.authorize_with :cancan
+
+  ## == Pundit ==
+  # config.authorize_with :pundit
+
+  ## == PaperTrail ==
+  # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
+
+  ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
+
+  ## == Gravatar integration ==
+  ## To disable Gravatar integration in Navigation Bar set to false
+  # config.show_gravatar = true
+
+  config.actions do
+    dashboard                     # mandatory
+    index                         # mandatory
+    new
+    export
+    bulk_delete
+    show
+    edit
+    delete
+    show_in_app
+
+    config.current_user_method(&:current_user)
+
+    ## With an audit adapter, you can add:
+    # history_index
+    # history_show
+  end
+end
+>>>>>>> 4fb2435f1b6ce87e06de761d11f5d3429465ebe4
