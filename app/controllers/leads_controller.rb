@@ -40,14 +40,16 @@ class LeadsController < ApplicationController
 
       # using SendGrid's Ruby Library
       # https://github.com/sendgrid/sendgrid-rub
+
+      
  
     from = Email.new(email: 'charleshebert1995@gmail.com')
     to = Email.new(email: 'remieldy@hotmail.com')
     subject = 'Sending with SendGrid is Fun hooooooooooooo'
     content = Content.new(type: 'text/plain', value: 'and easy to do iugiugiugiug, even with Ruby')
-    mail = Mail.new(from, subject, to, content)
+    mail = SendGrid::Mail.new(from, subject, to, content)
   
-    sg = SendGrid::API.new(api_key: '')
+    sg = SendGrid::API.new(api_key: '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')
     response = sg.client.mail._('send').post(request_body: mail.to_json)
     puts response.status_code
     puts response.body
