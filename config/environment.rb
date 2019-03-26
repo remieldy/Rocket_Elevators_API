@@ -4,7 +4,8 @@ require_relative 'application'
 # Initialize the Rails application.
 Rails.application.initialize!
 
-ActionMailer::Base.smtp_settings = {
+
+  ActionMailer::Base.smtp_settings = {
     :user_name => 'Dodelidoo',
     :password => 'D0delid00',
     :domain => 'yourdomain.com',
@@ -13,7 +14,6 @@ ActionMailer::Base.smtp_settings = {
     :authentication => :plain,
     :enable_starttls_auto => true
   }
-
 
 
   # using SendGrid's Ruby Library

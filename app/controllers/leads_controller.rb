@@ -1,3 +1,8 @@
+
+ require 'sendgrid-ruby'
+ include SendGrid
+
+
 class LeadsController < ApplicationController
   before_action :set_lead, only: [:show, :edit, :update, :destroy]
 
@@ -34,21 +39,20 @@ class LeadsController < ApplicationController
 
   def send_email
       # using SendGrid's Ruby Library
-      # https://github.com/sendgrid/sendgrid-ruby
-  require 'sendgrid-ruby'
-  include SendGrid
+      # https://github.com/sendgrid/sendgrid-rub
+ 
     from = Email.new(email: 'remieldy@hotmail.com')
-    to = Email.new(email: 'charlesHebert1995@hotmail.com')
-    subject = 'Sending with SendGrid is Fun'
-    content = Content.new(type: 'text/plain', value: 'and easy to do anywhere, even with Ruby')
+    to = Email.new(email: 'remieldy@hotmail.com')
+    subject = 'Sending with SendGrid is Fun hooooooooooooo'
+    content = Content.new(type: 'text/plain', value: 'and easy to do iugiugiugiug, even with Ruby')
     mail = Mail.new(from, subject, to, content)
   
-    sg = SendGrid::API.new(api_key: ENV['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'])
+    sg = SendGrid::API.new(api_key: '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')
     response = sg.client.mail._('send').post(request_body: mail.to_json)
     puts response.status_code
     puts response.body
     puts response.headers
-    end
+  end
 
     respond_to do |format|
       if @lead.save
@@ -61,6 +65,7 @@ class LeadsController < ApplicationController
       end
     end
   end
+  
 
   # PATCH/PUT /leads/1
   # PATCH/PUT /leads/1.json

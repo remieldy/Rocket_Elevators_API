@@ -31,3 +31,8 @@ log/development.log
 .vscode
 development.log
 sendgrid.env
+sendgrid.env
+sendgrid.env
+
+# Ignore application configuration
+/config/application.yml
