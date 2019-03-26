@@ -49,7 +49,7 @@ class LeadsController < ApplicationController
     content = Content.new(type: 'text/plain', value: 'and easy to do iugiugiugiug, even with Ruby')
     mail = SendGrid::Mail.new(from, subject, to, content)
   
-    sg = SendGrid::API.new(api_key: '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')
+    sg = SendGrid::API.new(api_key: '')
     response = sg.client.mail._('send').post(request_body: mail.to_json)
     puts response.status_code
     puts response.body
