@@ -37,11 +37,11 @@ class LeadsController < ApplicationController
         @lead.customer_id = @customer.id
     else @lead.customer_id = nil
 
-  def send_email
+
       # using SendGrid's Ruby Library
       # https://github.com/sendgrid/sendgrid-rub
  
-    from = Email.new(email: 'remieldy@hotmail.com')
+    from = Email.new(email: 'charleshebert1995@gmail.com')
     to = Email.new(email: 'remieldy@hotmail.com')
     subject = 'Sending with SendGrid is Fun hooooooooooooo'
     content = Content.new(type: 'text/plain', value: 'and easy to do iugiugiugiug, even with Ruby')
@@ -52,7 +52,7 @@ class LeadsController < ApplicationController
     puts response.status_code
     puts response.body
     puts response.headers
-  end
+ 
 
     respond_to do |format|
       if @lead.save
