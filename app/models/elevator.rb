@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class Elevator < ApplicationRecord
     belongs_to :column
 
@@ -22,8 +21,3 @@ class Elevator < ApplicationRecord
         puts message.sid
     end 
 end
-=======
-class Elevator < ApplicationRecord
-    belongs_to :column
-end
->>>>>>> 4fb2435f1b6ce87e06de761d11f5d3429465ebe4
