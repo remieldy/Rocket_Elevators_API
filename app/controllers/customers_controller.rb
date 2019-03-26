@@ -79,7 +79,7 @@ class CustomerController < ApplicationController
     @customer = customer.new(params[:customer])
     if @customer.save
       # Deliver the signup email
-      CustomerNotifier.send_signup_email(@customer).deliver
+      # CustomerNotifier.send_signup_email(@customer).deliver
       redirect_to(@customer, :notice => 'customer created')
     else
       render :action => 'new'

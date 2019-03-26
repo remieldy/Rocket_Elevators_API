@@ -1,10 +1,10 @@
 
- require 'sendgrid-ruby'
- include SendGrid
-
-
 class LeadsController < ApplicationController
   before_action :set_lead, only: [:show, :edit, :update, :destroy]
+
+  
+ require 'sendgrid-ruby'
+ include SendGrid
 
   # GET /leads
   # GET /leads.json
@@ -35,26 +35,13 @@ class LeadsController < ApplicationController
     @customer = Customer.find_by company_name: params[:lead][:company_name]
     if @customer != nil
         @lead.customer_id = @customer.id
-    else @lead.customer_id = nil
+    # else @lead.customer_id = nil
+    end
 
 
-      # using SendGrid's Ruby Library
-      # https://github.com/sendgrid/sendgrid-rub
+    sendgrid(@lead)
 
-      
- 
-    from = Email.new(email: 'charleshebert1995@gmail.com')
-    to = Email.new(email: 'remieldy@hotmail.com')
-    subject = 'Sending with SendGrid is Fun hooooooooooooo'
-    content = Content.new(type: 'text/plain', value: 'and easy to do iugiugiugiug, even with Ruby')
-    mail = SendGrid::Mail.new(from, subject, to, content)
   
-    sg = SendGrid::API.new(api_key: '')
-    response = sg.client.mail._('send').post(request_body: mail.to_json)
-    puts response.status_code
-    puts response.body
-    puts response.headers
- 
 
     respond_to do |format|
       if @lead.save
@@ -63,7 +50,6 @@ class LeadsController < ApplicationController
       else
         format.html { redirect_to "/index#contact" }
         format.json { render json: @lead.errors, status: :unprocessable_entity }
-      end
       end
     end
   end
@@ -102,5 +88,37 @@ class LeadsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def lead_params
       params.require(:lead).permit(:full_name, :company_name, :email, :phone_number, :project_name, :project_description, :department_in_charge, :message, :attachment)
+    end
+
+    def sendgrid(lead)
+      data = JSON.parse("{
+        \"personalizations\": [
+          {
+            \"to\": [
+              {
+                \"email\": \"#{lead.email}\" 
+              }
+            ],
+            \"dynamic_template_data\": {
+              \"subject\": \"Sending with SendGrid is Fun\",
+              \"full_name\": \"#{lead.full_name}\",
+              \"project_name\": \"#{lead.project_name}\"
+             
+            }
+          }
+        ],
+        \"from\": {
+          \"email\": \"support@codeboxx.com\"
+        },
+      \"template_id\": \"d-b5de3f29072e4708ba4ea62907aff5dd\"
+      }")
+      
+      sg = SendGrid::API.new(api_key: ENV['sengridApi_key'])
+      
+      response = sg.client.mail._('send').post(request_body: data)
+      # puts response.status_code
+      # puts response.body
+      # puts response.parsed_body
+      # puts response.headers
     end
 end
