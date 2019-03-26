@@ -5,7 +5,7 @@ class CreateBatteries < ActiveRecord::Migration[5.2]
       t.references :user, foreign_key: {on_delete: :cascade, on_update: :cascade}
       t.string :building_type, null: false
       t.string :status
-      t.date :date_of_instal
+      t.date :date_of_install
       t.date :date_of_inspect
       t.integer :inspect_certificate
       t.text :information

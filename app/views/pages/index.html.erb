@@ -117,6 +117,13 @@
                                     <a href="stats">
                                         STATS
                                     </a>
+								</li>
+								
+								<%=link_to "", '/map_google', :method => :get %>
+                                <li> <!-- GEOLOCATIONS -->
+                                    <a href="map_google">
+                                        GEOLOCATIONS
+                                    </a>
                                 </li>
 								</ul>
 							</nav>
@@ -1145,6 +1152,7 @@
 
 									<div class="row">
 											<div class="col-md-4">
+											
 												<%= form.label :full_name %>
 												<%= form.text_field :full_name, class: 'form-control', :required => true  %>
 											</div>

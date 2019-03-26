@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2019_03_14_155950) do
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "address_type", null: false
     t.string "status"
-    t.string "entity", null: false
+    t.string "entity"
     t.string "number_street", null: false
     t.string "apt_number"
     t.string "city", null: false
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2019_03_14_155950) do
     t.bigint "user_id"
     t.string "building_type", null: false
     t.string "status"
-    t.date "date_of_instal"
+    t.date "date_of_install"
     t.date "date_of_inspect"
     t.integer "inspect_certificate"
     t.text "information"
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 2019_03_14_155950) do
 
   create_table "building_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "building_id", null: false
-    t.string "info_key"
-    t.string "value"
+    t.string "information"
+    t.string "valeur"
     t.index ["building_id"], name: "index_building_details_on_building_id"
   end
 
@@ -69,7 +69,6 @@ ActiveRecord::Schema.define(version: 2019_03_14_155950) do
   end
 
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-
     t.bigint "address_id", null: false
     t.bigint "user_id"
     t.date "date_of_creation"
@@ -91,7 +90,7 @@ ActiveRecord::Schema.define(version: 2019_03_14_155950) do
     t.string "model_type", null: false
     t.string "building_type", null: false
     t.string "status"
-    t.date "date_of_instal"
+    t.date "date_of_install"
     t.date "date_of_inspect"
     t.string "inspect_certificate"
     t.text "information"

@@ -53,6 +53,14 @@ gem 'chartkick', '~> 3.0', '>= 3.0.2'
 gem 'highcharts-rails', '~> 6.0', '>= 6.0.3'
 #
 gem 'groupdate', '~> 2.5', '>= 2.5.2'
+#
+gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
+#
+gem 'zendesk_api', '~> 1.17'
+#
+gem 'geocoder', '~> 1.3', '>= 1.3.7'
+#
+gem 'faraday', '~> 0.9.2'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

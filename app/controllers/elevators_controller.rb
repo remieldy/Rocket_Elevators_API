@@ -39,9 +39,11 @@ class ElevatorsController < ApplicationController
 
   # PATCH/PUT /elevators/1
   # PATCH/PUT /elevators/1.json
+
   def update
     respond_to do |format|
-      if @elevator.update(elevator_params)
+      puts "hello world"
+      if @elevator.update(elevator_params)  
         format.html { redirect_to @elevator, notice: 'Elevator was successfully updated.' }
         format.json { render :show, status: :ok, location: @elevator }
       else
@@ -49,6 +51,7 @@ class ElevatorsController < ApplicationController
         format.json { render json: @elevator.errors, status: :unprocessable_entity }
       end
     end
+    
   end
 
   # DELETE /elevators/1
