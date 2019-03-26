@@ -18,6 +18,10 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'bootstrap-sass', '~> 3.3.4'
 #
+gem 'sendgrid-ruby', '~> 5.3'
+#
+gem 'ibm-watson-ruby', '~> 0.2.0'
+#
 gem 'font-awesome-sass', '~> 4.3.0'
 #
 gem 'font-awesome-rails'
