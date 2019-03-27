@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   get '/stats', to: 'stats#stats'
   get 'dropbox/auth' => 'dropbox#auth'
   get 'dropbox/auth_callback' => 'dropbox#auth_callback'
+  get '/map_google', to: 'pages#map_google'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'pages#index'
 end

@@ -53,6 +53,8 @@ class QuotesController < ApplicationController
       @quote.number_of_parking = params[:quote][:hyb_number_of_parking]
     end
 
+    ZendeskAPI::Ticket.create!($client, :subject => "#{@quote.full_name} from #{@quote.company_name}", :type=> "question", :comment => { :value => "The contact #{@quote.full_name} from company #{@quote.company_name} can be reached at email  #{@quote.email} and at phone number #{@quote.phone_number}. #{@quote.department} has a project named which would require contribution from Rocket Elevators." })
+
     respond_to do |format|
       if @quote.save
         format.html { redirect_to "/gform" }

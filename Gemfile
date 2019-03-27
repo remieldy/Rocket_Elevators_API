@@ -22,6 +22,8 @@ gem 'font-awesome-sass', '~> 4.3.0'
 #
 gem 'font-awesome-rails'
 #
+gem 'sendgrid-ruby', '~> 5.3'
+#
 gem 'jquery-ui-rails'
 #
 gem 'bootstrap-social-rails'
@@ -57,6 +59,13 @@ gem 'groupdate', '~> 2.5', '>= 2.5.2'
 gem 'slack-notifier', '~> 2.3', '>= 2.3.2'
 #
 gem 'dropbox_api'
+gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
+#
+gem 'zendesk_api', '~> 1.17'
+#
+gem 'geocoder', '~> 1.3', '>= 1.3.7'
+#
+gem 'faraday', '~> 0.9.2'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
