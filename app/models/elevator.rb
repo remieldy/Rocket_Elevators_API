@@ -7,7 +7,7 @@ class Elevator < ApplicationRecord
     end
 
  def slack_message()
-    notifier = Slack::Notifier.new "https://hooks.slack.com/services/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" do
+    notifier = Slack::Notifier.new (ENV["SLACK_API"]) do
         defaults channel: "#elevator_operations",
                  username: "Elevator_Status"
       end
