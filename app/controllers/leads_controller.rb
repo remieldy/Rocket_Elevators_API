@@ -2,10 +2,6 @@
 class LeadsController < ApplicationController
   before_action :set_lead, only: [:show, :edit, :update, :destroy]
 
-  
- require 'sendgrid-ruby'
- include SendGrid
-
   # GET /leads
   # GET /leads.json
   def index
@@ -25,6 +21,7 @@ class LeadsController < ApplicationController
 
   # GET /leads/1/edit
   def edit
+  
   end
 
   # POST /leads
@@ -32,16 +29,17 @@ class LeadsController < ApplicationController
   def create
     @lead = Lead.new(lead_params)
  
-    @customer = Customer.find_by company_name: params[:lead][:company_name]
-    if @customer != nil
-        @lead.customer_id = @customer.id
+    # @customer = Customer.find_by company_name: params[:lead][:company_name]
+
+    # if @customer != nil
+    #     @lead.customer_id = @customer.id
     # else @lead.customer_id = nil
-    end
 
+      ZendeskAPI::Ticket.create!($client, :subject => "#{@lead.full_name} from #{@lead.company_name}", :type=> "task", :comment => { :value => "The contact #{@lead.full_name} from company #{@lead.company_name} can be reached at email  #{@lead.email} and at phone number #{@lead.phone_number}. #{@lead.department_in_charge} has a project named #{@lead.project_name} which would require contribution from Rocket Elevators.
+      #{@lead.project_description}
+      Attached Message: #{@lead.message}"})
 
-    sendgrid(@lead)
-
-  
+      # sendgrid(@lead)
 
     respond_to do |format|
       if @lead.save
@@ -53,7 +51,6 @@ class LeadsController < ApplicationController
       end
     end
   end
-  
 
   # PATCH/PUT /leads/1
   # PATCH/PUT /leads/1.json
@@ -89,7 +86,7 @@ class LeadsController < ApplicationController
     def lead_params
       params.require(:lead).permit(:full_name, :company_name, :email, :phone_number, :project_name, :project_description, :department_in_charge, :message, :attachment)
     end
-
+    
     def sendgrid(lead)
       data = JSON.parse("{
         \"personalizations\": [

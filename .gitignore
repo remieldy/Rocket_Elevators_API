@@ -34,5 +34,31 @@ sendgrid.env
 sendgrid.env
 sendgrid.env
 
-# Ignore application configuration
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+tmp/
+!/log/.keep
+!/tmp/.keep
+
+# Ignore uploaded files in development
+/storage/*
+!/storage/.keep
+log/development.log
+
+/node_modules
+/yarn-error.log
+
+/public/assets
+.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+/config/database.yml
 /config/application.yml
+
+
+.vscode
+development.log
