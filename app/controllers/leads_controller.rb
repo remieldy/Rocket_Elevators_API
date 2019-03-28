@@ -20,32 +20,27 @@ class LeadsController < ApplicationController
 
   # GET /leads/1/edit
   def edit
+  
   end
 
   # POST /leads
   # POST /leads.json
   def create
-
     @lead = Lead.new(lead_params)
-    
-    client = DropboxApi::Client.new(ENV["DROPBOX_API"])
-    client.create_folder("/#{@lead.email}")
-    content = @lead.attachment
+    @lead.createdropbox
+ 
+    # @customer = Customer.find_by company_name: params[:lead][:company_name]
 
-    client.upload("/#{@lead.email}/#{@lead.full_name}.txt", content.read)
-    @lead.attachment= nil
-    @lead.save!
+    # if @customer != nil
+    #     @lead.customer_id = @customer.id
+    # else @lead.customer_id = nil
 
-    @customer = Customer.find_by company_name: params[:lead][:company_name]
-    if @customer != nil
-        @lead.customer_id = @customer.id
-        ZendeskAPI::Ticket.create!($client, :subject => "#{@lead.full_name} from #{@lead.company_name}", :type=> "task", :comment => { :value => "The contact #{@lead.full_name} from company #{@lead.company_name} can be reached at email  #{@lead.email} and at phone number #{@lead.phone_number}. #{@lead.department_in_charge} has a project named #{@lead.project_name} which would require contribution from Rocket Elevators.
-          #{@lead.project_description}
-          Attached Message: #{@lead.message}"})
-    
-          sendgrid(@lead)
-    
-    else @lead.customer_id = nil
+      ZendeskAPI::Ticket.create!($client, :subject => "#{@lead.full_name} from #{@lead.company_name}", :type=> "task", :comment => { :value => "The contact #{@lead.full_name} from company #{@lead.company_name} can be reached at email  #{@lead.email} and at phone number #{@lead.phone_number}. #{@lead.department_in_charge} has a project named #{@lead.project_name} which would require contribution from Rocket Elevators.
+      #{@lead.project_description}
+      Attached Message: #{@lead.message}"})
+
+      # sendgrid(@lead)
+
     respond_to do |format|
       if @lead.save
         format.html { redirect_to "/index#contact", alert: 'Lead was successfully created.' }
@@ -53,7 +48,6 @@ class LeadsController < ApplicationController
       else
         format.html { redirect_to "/index#contact" }
         format.json { render json: @lead.errors, status: :unprocessable_entity }
-      end
       end
     end
   end
@@ -92,7 +86,7 @@ class LeadsController < ApplicationController
     def lead_params
       params.require(:lead).permit(:full_name, :company_name, :email, :phone_number, :project_name, :project_description, :department_in_charge, :message, :attachment)
     end
-        
+    
     def sendgrid(lead)
       data = JSON.parse("{
         \"personalizations\": [
@@ -113,7 +107,7 @@ class LeadsController < ApplicationController
         \"from\": {
           \"email\": \"support@codeboxx.com\"
         },
-      \"template_id\": \"d-b5de3f29072e4708ba4ea62907aff5dd\"
+      \"template_id\": \"d-a50a95e52de04427951c9ca1ad7e7a5a\"
       }")
       
       sg = SendGrid::API.new(api_key: ENV['sengridApi_key'])

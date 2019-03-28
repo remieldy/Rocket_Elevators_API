@@ -35,4 +35,3 @@ end
         
         puts message.sid
     end 
-end
