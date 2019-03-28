@@ -63,6 +63,10 @@ gem 'zendesk_api', '~> 1.17'
 gem 'geocoder', '~> 1.3', '>= 1.3.7'
 #
 gem 'faraday', '~> 0.9.2'
+#
+gem 'figaro'
+#
+gem 'ibm_watson', '~> 0.13.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
