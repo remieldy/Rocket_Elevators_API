@@ -5,7 +5,7 @@ class Lead < ApplicationRecord
     validates :company_name, presence: true
     validates :email, presence: true
 
-        def createdropbox
+        def dropboxcreated
             if self.attachment
                 #Connect to Dropbox with API Key
                 client = DropboxApi::Client.new(ENV['DROPBOX_API'])
