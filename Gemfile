@@ -57,6 +57,9 @@ gem 'highcharts-rails', '~> 6.0', '>= 6.0.3'
 gem 'groupdate', '~> 2.5', '>= 2.5.2'
 #
 gem 'figaro'
+#
+gem 'ibm_watson', '~> 0.13.0'
+
 
 
 

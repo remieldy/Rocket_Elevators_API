@@ -35,4 +35,5 @@ Rails.application.routes.draw do
   get '/stats', to: 'stats#stats'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'pages#index'
+  get '/watson', to: 'watson#watson'
 end
