@@ -10,7 +10,7 @@ server "34.203.94.126", user: "ubuntu", roles: %w{app db web}
 set :rails_env, "development"
 set :deploy_to, "/home/ubuntu/apps/remi_dupont_lemay"
 set :linked_dirs, %w{tmp/pids tmp/sockets log}
-set :linked_files, %w{config/secrets.yml config/database.yml}
+set :linked_files, %w{config/secrets.yml config/database.yml config/application.yml}
 
 # role-based syntax
 # ==================
@@ -24,8 +24,6 @@ role :app, %w{ubuntu@34.203.94.126}
 role :web, %w{ubuntu@34.203.94.126}
 role :db,  %w{ubuntu@34.203.94.126}
 
-
-set :linked_files, %w{config/secrets.yml config/database.yml config/application.yml}
 
 # Configuration
 # =============
