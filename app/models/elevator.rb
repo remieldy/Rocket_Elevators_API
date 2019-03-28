@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-class Elevator < ApplicationRecord
-    belongs_to :column
-
-end
-
-
-=======
 class Elevator < ApplicationRecord
     belongs_to :column
 
@@ -29,4 +21,3 @@ class Elevator < ApplicationRecord
         puts message.sid
     end 
 end
->>>>>>> master
