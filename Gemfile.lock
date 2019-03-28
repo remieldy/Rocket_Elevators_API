@@ -72,6 +72,8 @@ GEM
     capistrano-rails (1.4.0)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
+    capistrano-rake (0.2.0)
+      capistrano (>= 3.0)
     capistrano3-puma (3.1.1)
       capistrano (~> 3.7)
       capistrano-bundler
@@ -358,6 +360,7 @@ DEPENDENCIES
   capistrano (~> 3.10)
   capistrano-bundler (>= 1.1.0)
   capistrano-rails (~> 1.4)
+  capistrano-rake
   capistrano3-puma
   capybara (>= 2.15)
   chartkick (~> 3.0, >= 3.0.2)
