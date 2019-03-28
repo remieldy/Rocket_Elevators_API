@@ -25,6 +25,7 @@ role :web, %w{ubuntu@34.203.94.126}
 role :db,  %w{ubuntu@34.203.94.126}
 
 
+set :linked_files, %w{config/secrets.yml config/database.yml config/application.yml}
 
 # Configuration
 # =============
