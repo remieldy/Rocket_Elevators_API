@@ -1,7 +1,12 @@
 class Elevator < ApplicationRecord
     
     belongs_to :column
-
+    
+    after_commit do 
+        if status == 'intervention'
+            sms_elevator()
+        end
+    end
     before_save do
         slack_message()
     end
@@ -16,11 +21,7 @@ class Elevator < ApplicationRecord
     
     end
 end
-    after_commit do 
-        if status == 'intervention'
-            sms_elevator()
-        end
-    end
+
 
     
     def sms_elevator()
