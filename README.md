@@ -1,7 +1,7 @@
 
 
 # API
-### name: twilio: 
+### Twilio: 
 
 - communication tools unifies
 - allows sending sms
@@ -10,27 +10,27 @@
 - a company comes in contact with an individual
 
 
-### name zendesk:
+### Zendesk:
 - platform for handling "customer contact" intervention tickets
 
 
-### name slask:
+### Slack:
 - the information system can communicate with humans through Slack
 
 
-### name imb watson:
+### IBM Watson:
 - service provider (public cloud)
 
 
-### name dropbox:
+### Dropbox:
 - service provider (public cloud)
 
 
-### name Google Maps:
+### Google Maps:
 - geolocation the most elaborate that can be found
 
 
-### name SendGrid:
+### SendGrid:
 - send transactional email
 - acknowledge receipt
 - order confirmation
