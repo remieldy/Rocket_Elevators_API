@@ -7,27 +7,32 @@ class LeadsController < ApplicationController
  
   # GET /leads
   # GET /leads.json
+
   def index
     @leads = Lead.all
   end
  
   # GET /leads/1
   # GET /leads/1.json
+
   def show
   end
  
   # GET /leads/new
+
   def new
     @lead = Lead.new
     format.html {redirect_to "/index#contact"}
   end
  
   # GET /leads/1/edit
+
   def edit
   end
  
   # POST /leads
   # POST /leads.json
+
   def create
     @lead = Lead.new(lead_params)
  
@@ -56,6 +61,7 @@ class LeadsController < ApplicationController
  
   # PATCH/PUT /leads/1
   # PATCH/PUT /leads/1.json
+
   def update
     respond_to do |format|
       if @lead.update(lead_params)
@@ -70,6 +76,7 @@ class LeadsController < ApplicationController
  
   # DELETE /leads/1
   # DELETE /leads/1.json
+
   def destroy
     @lead.destroy
     respond_to do |format|
@@ -80,15 +87,19 @@ class LeadsController < ApplicationController
  
   private
     # Use callbacks to share common setup or constraints between actions.
+
     def set_lead
       @lead = Lead.find(params[:id])
     end
  
     # Never trust parameters from the scary internet, only allow the white list through.
+
     def lead_params
       params.require(:lead).permit(:full_name, :company_name, :email, :phone_number, :project_name, :project_description, :department_in_charge, :message, :attachment)
     end
  
+
+    #=========================SENDGRID API=====================================================
     def sendgrid(lead)
       data = JSON.parse("{
         \"personalizations\": [
@@ -96,23 +107,24 @@ class LeadsController < ApplicationController
             \"to\": [
               {
                 \"email\": \"#{lead.email}\"
-
+                
               }
             ],
             \"dynamic_template_data\": {
-              \"subject\": \"Sending with SendGrid is Funish\",
+              \"subject\": \"Sending with SendGrid is supposed to be Fun they said\",
               \"full_name\": \"#{lead.full_name}\",
               \"project_name\": \"#{lead.project_name}\"
+              
             }
           }
         ],
         \"from\": {
           \"email\": \"support@codeboxx.com\"
         },
-      \"template_id\": \"d-b5de3f29072e4708ba4ea62907aff5dd\"
+      \"template_id\": \"d-7fdd742e0493440f89582c56a7b6e4d5\"
       }")
- 
-      sg = SendGrid::API.new(api_key: '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')
+        
+      sg = SendGrid::API.new(api_key: "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")
  
       response = sg.client.mail._('send').post(request_body: data)
       # puts response.status_code
@@ -121,3 +133,4 @@ class LeadsController < ApplicationController
       # puts response.headers
     end
  end
+ #=====================================================================

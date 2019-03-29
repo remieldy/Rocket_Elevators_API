@@ -1,5 +1,7 @@
 {
   "name": "rocket_elevators",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "aws-sdk": "^2.431.0"
+  }
 }

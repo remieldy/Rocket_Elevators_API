@@ -3,26 +3,31 @@ class CustomersController < ApplicationController
 
   # GET /customers
   # GET /customers.json
+
   def index
     @customers = Customer.all
   end
 
   # GET /customers/1
   # GET /customers/1.json
+
   def show
   end
 
   # GET /customers/new
+
   def new
     @customer = Customer.new
   end
 
   # GET /customers/1/edit
+  
   def edit
   end
 
   # POST /customers
   # POST /customers.json
+
   def create
     @customer = Customer.new(customer_params)
 
@@ -39,6 +44,7 @@ class CustomersController < ApplicationController
 
   # PATCH/PUT /customers/1
   # PATCH/PUT /customers/1.json
+
   def update
     respond_to do |format|
       if @customer.update(customer_params)
@@ -53,6 +59,7 @@ class CustomersController < ApplicationController
 
   # DELETE /customers/1
   # DELETE /customers/1.json
+
   def destroy
     @customer.destroy
     respond_to do |format|
@@ -73,6 +80,8 @@ class CustomersController < ApplicationController
     end
 end
 
+#=============================CREATE USER WITH SIGNUP EMAIL===================================================
+
 class CustomerController < ApplicationController
   def create
     # Create the user from params
@@ -86,3 +95,4 @@ class CustomerController < ApplicationController
     end
   end
 end
+#============================================================================================================

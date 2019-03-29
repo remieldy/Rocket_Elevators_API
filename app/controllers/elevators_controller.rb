@@ -3,26 +3,31 @@ class ElevatorsController < ApplicationController
 
   # GET /elevators
   # GET /elevators.json
+
   def index
     @elevators = Elevator.all
   end
 
   # GET /elevators/1
   # GET /elevators/1.json
+
   def show
   end
 
   # GET /elevators/new
+
   def new
     @elevator = Elevator.new
   end
 
   # GET /elevators/1/edit
+
   def edit
   end
 
   # POST /elevators
   # POST /elevators.json
+
   def create
     @elevator = Elevator.new(elevator_params)
 
@@ -39,6 +44,7 @@ class ElevatorsController < ApplicationController
 
   # PATCH/PUT /elevators/1
   # PATCH/PUT /elevators/1.json
+
   def update
     respond_to do |format|
       if @elevator.update(elevator_params)
@@ -53,6 +59,7 @@ class ElevatorsController < ApplicationController
 
   # DELETE /elevators/1
   # DELETE /elevators/1.json
+  
   def destroy
     @elevator.destroy
     respond_to do |format|

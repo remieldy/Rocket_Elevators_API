@@ -24,6 +24,10 @@ gem 'ibm-watson-ruby', '~> 0.2.0'
 #
 gem 'font-awesome-sass', '~> 4.3.0'
 #
+gem 'aws-sdk-transcribeservice', '~> 1.0'
+#
+gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
+#
 gem 'font-awesome-rails'
 #
 gem 'jquery-ui-rails'

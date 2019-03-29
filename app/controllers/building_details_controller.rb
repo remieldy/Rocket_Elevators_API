@@ -3,26 +3,31 @@ class BuildingDetailsController < ApplicationController
 
   # GET /building_details
   # GET /building_details.json
+
   def index
     @building_details = BuildingDetail.all
   end
 
   # GET /building_details/1
   # GET /building_details/1.json
+
   def show
   end
 
   # GET /building_details/new
+
   def new
     @building_detail = BuildingDetail.new
   end
 
   # GET /building_details/1/edit
+
   def edit
   end
 
   # POST /building_details
   # POST /building_details.json
+
   def create
     @building_detail = BuildingDetail.new(building_detail_params)
 
@@ -39,6 +44,7 @@ class BuildingDetailsController < ApplicationController
 
   # PATCH/PUT /building_details/1
   # PATCH/PUT /building_details/1.json
+
   def update
     respond_to do |format|
       if @building_detail.update(building_detail_params)
@@ -53,6 +59,7 @@ class BuildingDetailsController < ApplicationController
 
   # DELETE /building_details/1
   # DELETE /building_details/1.json
+
   def destroy
     @building_detail.destroy
     respond_to do |format|
@@ -68,6 +75,7 @@ class BuildingDetailsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+    
     def building_detail_params
       params.fetch(:building_detail, {})
     end

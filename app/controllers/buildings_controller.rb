@@ -3,26 +3,31 @@ class BuildingsController < ApplicationController
 
   # GET /buildings
   # GET /buildings.json
+
   def index
     @buildings = Building.all
   end
 
   # GET /buildings/1
   # GET /buildings/1.json
+
   def show
   end
 
   # GET /buildings/new
+  
   def new
     @building = Building.new
   end
 
   # GET /buildings/1/edit
+
   def edit
   end
 
   # POST /buildings
   # POST /buildings.json
+
   def create
     @building = Building.new(building_params)
 
@@ -39,6 +44,7 @@ class BuildingsController < ApplicationController
 
   # PATCH/PUT /buildings/1
   # PATCH/PUT /buildings/1.json
+
   def update
     respond_to do |format|
       if @building.update(building_params)
@@ -53,6 +59,7 @@ class BuildingsController < ApplicationController
 
   # DELETE /buildings/1
   # DELETE /buildings/1.json
+  
   def destroy
     @building.destroy
     respond_to do |format|

@@ -21,6 +21,7 @@ class QuotesController < ApplicationController
   def edit
   end
 
+#====================================TYPE OF QUOTES=================================================
   # POST /quotes
   # POST /quotes.json
   def create
@@ -63,9 +64,12 @@ class QuotesController < ApplicationController
       end
     end
   end
+  
+#=======================================================================
 
   # PATCH/PUT /quotes/1
   # PATCH/PUT /quotes/1.json
+
   def update
     respond_to do |format|
       if @quote.update(quote_params)
@@ -81,6 +85,7 @@ class QuotesController < ApplicationController
 
   # DELETE /quotes/1
   # DELETE /quotes/1.json
+
   def destroy
     @quote.destroy
     respond_to do |format|

@@ -9,6 +9,7 @@ end
 
   # GET /stats
   # GET /stats.json
+
   def index
       conn = PG::Connection.open(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com", port: 5432, dbname: "marc_antoine_tanguay", user: "codeboxx", password: "Codeboxx1!")
       @result  = conn.exec("SELECT extract(YEAR FROM creation_date) AS YEAR, to_char(to_timestamp(extract(MONTH FROM creation_date)::text, 'MM'), 'TMmon') AS MONTH, COUNT(quote_id)
@@ -37,20 +38,24 @@ end
 
   # GET /stats/1
   # GET /stats/1.json
+
   def show
   end
 
   # GET /stats/new
+
   def new
     @stat = Stat.new
   end
 
   # GET /stats/1/edit
+
   def edit
   end
 
   # POST /stats
   # POST /stats.json
+
   def create
     @stat = Stat.new(stat_params)
 
@@ -67,6 +72,7 @@ end
 
   # PATCH/PUT /stats/1
   # PATCH/PUT /stats/1.json
+
   def update
     respond_to do |format|
       if @stat.update(stat_params)
@@ -81,6 +87,7 @@ end
 
   # DELETE /stats/1
   # DELETE /stats/1.json
+  
   def destroy
     @stat.destroy
     respond_to do |format|
