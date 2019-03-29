@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :addresses
   resources :leads
   resources :quotes
+  resources :geolocations
   
   get '/gform', to: 'pages#gform'
   get '/residential', to: 'pages#residential'
@@ -36,6 +37,8 @@ Rails.application.routes.draw do
   get 'dropbox/auth' => 'dropbox#auth'
   get 'dropbox/auth_callback' => 'dropbox#auth_callback'
   get '/map_google', to: 'pages#map_google'
+  get '/watson', to: 'watson#watson'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'pages#index'
+
 end
