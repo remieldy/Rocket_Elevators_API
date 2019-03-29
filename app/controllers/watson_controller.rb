@@ -3,7 +3,6 @@ require 'uri'
 require 'json'
 
 
-
 class WatsonController < ApplicationController
 
 def watson

@@ -1,3 +1,4 @@
+
 class LeadsController < ApplicationController
   before_action :set_lead, only: [:show, :edit, :update, :destroy]
 
@@ -39,7 +40,7 @@ class LeadsController < ApplicationController
       #{@lead.project_description}
       Attached Message: #{@lead.message}"})
 
-      # sendgrid(@lead)
+      sendgrid(@lead)
 
     respond_to do |format|
       if @lead.save
