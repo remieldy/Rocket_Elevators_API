@@ -1,0 +1,9 @@
+id,first_name,last_name,title,email,encrypted_password
+1,Marc-Antoine,Tanguay,Student,marc_ant21@hotmail.com,$2a$11$qsPLdjh67kxbogEVvA/Ik.5yy2g6iIdge7VvA/WUNoHKA3zNdP1IS
+2,Philippe,Bouillon,Comm Rep,philippe.bouillon@codeboxx.biz,$2a$11$qsPLdjh67kxbogEVvA/Ik.5yy2g6iIdge7VvA/WUNoHKA3zNdP1IS
+3,Mathieu,LeFrançois,Engineer,mathieu.lefrançois@codeboxx.biz,$2a$11$qsPLdjh67kxbogEVvA/Ik.5yy2g6iIdge7VvA/WUNoHKA3zNdP1IS
+4,Mathieu,Houde,Engineer,mathieu.houde@codeboxx.biz,$2a$11$qsPLdjh67kxbogEVvA/Ik.5yy2g6iIdge7VvA/WUNoHKA3zNdP1IS
+5,Remi,Gagnon,Engineer,remi.gagnon@codeboxx.biz,$2a$11$qsPLdjh67kxbogEVvA/Ik.5yy2g6iIdge7VvA/WUNoHKA3zNdP1IS
+6,Serge,Savoie,Engineer,serge.savoie@codeboxx.biz,$2a$11$qsPLdjh67kxbogEVvA/Ik.5yy2g6iIdge7VvA/WUNoHKA3zNdP1IS
+7,Felix-Antoine,Paradis,Engineer,felix-antoine.paradis@codeboxx.biz,$2a$11$qsPLdjh67kxbogEVvA/Ik.5yy2g6iIdge7VvA/WUNoHKA3zNdP1IS
+8,Nadya,Fortier,Director,nadya.fortier@codeboxx.biz,$2a$11$qsPLdjh67kxbogEVvA/Ik.5yy2g6iIdge7VvA/WUNoHKA3zNdP1IS

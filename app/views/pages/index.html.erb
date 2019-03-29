@@ -117,6 +117,13 @@
                                     <a href="stats">
                                         STATS
                                     </a>
+								</li>
+								
+								<%=link_to "", '/geolocations', :method => :get %>
+                                <li> <!-- GEOLOCATIONS -->
+                                    <a href="geolocations">
+                                        GEOLOCATIONS
+                                    </a>
                                 </li>
 								</ul>
 							</nav>
@@ -1087,7 +1094,6 @@
 					</header>
 
 
-
 					<div class="row">
 
 						<!-- FORM -->
@@ -1146,6 +1152,7 @@
 
 									<div class="row">
 											<div class="col-md-4">
+											
 												<%= form.label :full_name %>
 												<%= form.text_field :full_name, class: 'form-control', :required => true  %>
 											</div>
@@ -1183,7 +1190,6 @@
 												<%= form.label :project_description %>
 												<%= form.text_area :project_description, class: 'form-control', rows: '6' %>
 											</div>
-											
 									</div>
 									<div class="row">
 										<div class="col-md-12">
@@ -1204,10 +1210,6 @@
 								<div class="row">
 									<div class="col-md-12">
 									<%= form.submit class: 'btn btn-primary', value: 'Send Message' %>
-									<div> 
-									
-									</div>
-									
 
 									</div>
 								</div>

@@ -3,4 +3,5 @@ class Lead < ApplicationRecord
     validates :full_name, presence: true
     validates :company_name, presence: true
     validates :email, presence: true
+    
 end
