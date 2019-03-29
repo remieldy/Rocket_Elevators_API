@@ -41,8 +41,6 @@ class LeadsController < ApplicationController
 
     sendgrid(@lead)
 
-  
-
     respond_to do |format|
       if @lead.save
         format.html { redirect_to "/index#contact", alert: 'Lead was successfully created.' }
@@ -89,11 +87,12 @@ class LeadsController < ApplicationController
     def lead_params
       params.require(:lead).permit(:full_name, :company_name, :email, :phone_number, :project_name, :project_description, :department_in_charge, :message, :attachment)
     end
-
+    puts "*****************ALLO*******************"
     def sendgrid(lead)
       data = JSON.parse("{
         \"personalizations\": [
           {
+            
             \"to\": [
               {
                 \"email\": \"#{lead.email}\" 
@@ -110,11 +109,11 @@ class LeadsController < ApplicationController
         \"from\": {
           \"email\": \"support@codeboxx.com\"
         },
-      \"template_id\": \"d-a50a95e52de04427951c9ca1ad7e7a5a\"
+      \"template_id\": \"d-1e12317c29e946a3889d1ee75c28d580\"
       }")
-      
+
       sg = SendGrid::API.new(api_key: ENV['sengridApi_key'])
-      
+      puts "*****************ouiiiiiiiiiiiiiiiiiiii*******************"
       response = sg.client.mail._('send').post(request_body: data)
       # puts response.status_code
       # puts response.body
