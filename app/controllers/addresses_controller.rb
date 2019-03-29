@@ -3,31 +3,26 @@ class AddressesController < ApplicationController
 
   # GET /addresses
   # GET /addresses.json
-  
   def index
     @addresses = Address.all
   end
 
   # GET /addresses/1
   # GET /addresses/1.json
-
   def show
   end
 
   # GET /addresses/new
-
   def new
     @address = Address.new
   end
 
   # GET /addresses/1/edit
-
   def edit
   end
 
   # POST /addresses
   # POST /addresses.json
-
   def create
     @address = Address.new(address_params)
 
@@ -44,7 +39,6 @@ class AddressesController < ApplicationController
 
   # PATCH/PUT /addresses/1
   # PATCH/PUT /addresses/1.json
-
   def update
     respond_to do |format|
       if @address.update(address_params)
@@ -59,7 +53,6 @@ class AddressesController < ApplicationController
 
   # DELETE /addresses/1
   # DELETE /addresses/1.json
-
   def destroy
     @address.destroy
     respond_to do |format|

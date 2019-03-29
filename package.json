@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "rocket_elevators",
   "private": true,
@@ -5,3 +6,10 @@
     "aws-sdk": "^2.431.0"
   }
 }
+=======
+{
+  "name": "rocket_elevators",
+  "private": true,
+  "dependencies": {}
+}
+>>>>>>> 60185e4ff7dfe460020bd4d2e29f41935fd1c5f8

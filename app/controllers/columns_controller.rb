@@ -3,31 +3,26 @@ class ColumnsController < ApplicationController
 
   # GET /columns
   # GET /columns.json
-
   def index
     @columns = Column.all
   end
 
   # GET /columns/1
   # GET /columns/1.json
-
   def show
   end
 
   # GET /columns/new
-
   def new
     @column = Column.new
   end
 
   # GET /columns/1/edit
-
   def edit
   end
 
   # POST /columns
   # POST /columns.json
-
   def create
     @column = Column.new(column_params)
 
@@ -44,7 +39,6 @@ class ColumnsController < ApplicationController
 
   # PATCH/PUT /columns/1
   # PATCH/PUT /columns/1.json
-
   def update
     respond_to do |format|
       if @column.update(column_params)
@@ -59,7 +53,6 @@ class ColumnsController < ApplicationController
 
   # DELETE /columns/1
   # DELETE /columns/1.json
-  
   def destroy
     @column.destroy
     respond_to do |format|

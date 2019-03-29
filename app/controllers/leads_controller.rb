@@ -1,3 +1,4 @@
+
 class LeadsController < ApplicationController
   before_action :set_lead, only: [:show, :edit, :update, :destroy]
  
@@ -28,6 +29,7 @@ class LeadsController < ApplicationController
   # GET /leads/1/edit
 
   def edit
+  
   end
  
   # POST /leads
@@ -35,18 +37,20 @@ class LeadsController < ApplicationController
 
   def create
     @lead = Lead.new(lead_params)
+    @lead.dropboxcreated
  
-    @customer = Customer.find_by company_name: params[:lead][:company_name]
-    if @customer != nil
-        @lead.customer_id = @customer.id
+    # @customer = Customer.find_by company_name: params[:lead][:company_name]
+
+    # if @customer != nil
+    #     @lead.customer_id = @customer.id
     # else @lead.customer_id = nil
-    end
- 
- 
-    sendgrid(@lead)
- 
- 
- 
+
+      ZendeskAPI::Ticket.create!($client, :subject => "#{@lead.full_name} from #{@lead.company_name}", :type=> "task", :comment => { :value => "The contact #{@lead.full_name} from company #{@lead.company_name} can be reached at email  #{@lead.email} and at phone number #{@lead.phone_number}. #{@lead.department_in_charge} has a project named #{@lead.project_name} which would require contribution from Rocket Elevators.
+      #{@lead.project_description}
+      Attached Message: #{@lead.message}"})
+
+      sendgrid(@lead)
+
     respond_to do |format|
       if @lead.save
         format.html { redirect_to "/index#contact", alert: 'Lead was successfully created.' }
@@ -97,40 +101,36 @@ class LeadsController < ApplicationController
     def lead_params
       params.require(:lead).permit(:full_name, :company_name, :email, :phone_number, :project_name, :project_description, :department_in_charge, :message, :attachment)
     end
- 
-
-    #=========================SENDGRID API=====================================================
+    
     def sendgrid(lead)
       data = JSON.parse("{
         \"personalizations\": [
           {
             \"to\": [
               {
-                \"email\": \"#{lead.email}\"
-                
+                \"email\": \"#{lead.email}\" 
               }
             ],
             \"dynamic_template_data\": {
-              \"subject\": \"Sending with SendGrid is supposed to be Fun they said\",
+              \"subject\": \"Sending with SendGrid is Fun\",
               \"full_name\": \"#{lead.full_name}\",
               \"project_name\": \"#{lead.project_name}\"
-              
+             
             }
           }
         ],
         \"from\": {
           \"email\": \"support@codeboxx.com\"
         },
-      \"template_id\": \"d-7fdd742e0493440f89582c56a7b6e4d5\"
+      \"template_id\": \"d-a50a95e52de04427951c9ca1ad7e7a5a\"
       }")
-        
-      sg = SendGrid::API.new(api_key: "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")
- 
+      
+      sg = SendGrid::API.new(api_key: ENV['sengridApi_key'])
+      
       response = sg.client.mail._('send').post(request_body: data)
       # puts response.status_code
       # puts response.body
       # puts response.parsed_body
       # puts response.headers
     end
- end
- #=====================================================================
+end

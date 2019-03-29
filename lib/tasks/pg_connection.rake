@@ -4,7 +4,7 @@ namespace :export do
     desc "export to postgresql"
     task datawarehouse: :environment do
     
-        conn = PG::Connection.open(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com", port: 5432, dbname: "marc_antoine_tanguay", user: "codeboxx", password: "Codeboxx1!")
+        conn = PG::Connection.open(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com", port: 5432, dbname: "remi_dupont_lemay", user: "codeboxx", password: "Codeboxx1!")
 
         conn.exec ("TRUNCATE factquotes RESTART IDENTITY")
         Quote.all.each do |quote|

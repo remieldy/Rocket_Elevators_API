@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <%= form_with(model: address, local: true) do |form| %>
@@ -17,3 +18,22 @@
     <%= form.submit %>
   </div>
 <% end %>
+=======
+<%= form_with(model: address, local: true) do |form| %>
+  <% if address.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(address.errors.count, "error") %> prohibited this address from being saved:</h2>
+
+      <ul>
+      <% address.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+>>>>>>> 60185e4ff7dfe460020bd4d2e29f41935fd1c5f8
