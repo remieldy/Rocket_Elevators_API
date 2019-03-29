@@ -56,6 +56,9 @@ gem 'highcharts-rails', '~> 6.0', '>= 6.0.3'
 #
 gem 'groupdate', '~> 2.5', '>= 2.5.2'
 #
+gem 'slack-notifier', '~> 2.3', '>= 2.3.2'
+#
+gem 'dropbox_api'
 gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
 #
 gem 'zendesk_api', '~> 1.17'

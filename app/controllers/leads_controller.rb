@@ -1,4 +1,3 @@
-
 class LeadsController < ApplicationController
   before_action :set_lead, only: [:show, :edit, :update, :destroy]
 
@@ -28,6 +27,7 @@ class LeadsController < ApplicationController
   # POST /leads.json
   def create
     @lead = Lead.new(lead_params)
+    @lead.dropboxcreated
  
     # @customer = Customer.find_by company_name: params[:lead][:company_name]
 
