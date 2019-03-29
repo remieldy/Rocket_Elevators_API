@@ -2,9 +2,6 @@
 class LeadsController < ApplicationController
   before_action :set_lead, only: [:show, :edit, :update, :destroy]
 
-  require 'sendgrid-ruby'
-  include SendGrid
-
   # GET /leads
   # GET /leads.json
   def index
@@ -31,6 +28,7 @@ class LeadsController < ApplicationController
   # POST /leads.json
   def create
     @lead = Lead.new(lead_params)
+    @lead.dropboxcreated
  
     # @customer = Customer.find_by company_name: params[:lead][:company_name]
 
@@ -42,7 +40,7 @@ class LeadsController < ApplicationController
       #{@lead.project_description}
       Attached Message: #{@lead.message}"})
 
-    sendgrid(@lead)
+      sendgrid(@lead)
 
     respond_to do |format|
       if @lead.save
@@ -94,7 +92,6 @@ class LeadsController < ApplicationController
       data = JSON.parse("{
         \"personalizations\": [
           {
-            
             \"to\": [
               {
                 \"email\": \"#{lead.email}\" 
@@ -111,11 +108,11 @@ class LeadsController < ApplicationController
         \"from\": {
           \"email\": \"support@codeboxx.com\"
         },
-      \"template_id\": \"d-1e12317c29e946a3889d1ee75c28d580\"
+      \"template_id\": \"d-a50a95e52de04427951c9ca1ad7e7a5a\"
       }")
-
+      
       sg = SendGrid::API.new(api_key: ENV['sengridApi_key'])
-      puts "*****************ouiiiiiiiiiiiiiiiiiiii*******************"
+      
       response = sg.client.mail._('send').post(request_body: data)
       # puts response.status_code
       # puts response.body

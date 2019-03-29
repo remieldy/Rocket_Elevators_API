@@ -30,7 +30,7 @@ class GeolocationsController < ApplicationController
                elevators: elevators,
                tech_name: contact,
                address: address.display_address,
-               floor_number: floor
+               floor_number: floor,
 		}
             end
 		end
