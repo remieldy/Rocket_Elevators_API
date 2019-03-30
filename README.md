@@ -1,6 +1,17 @@
 
 video: https://www.youtube.com/watch?v=g4yALa73NHU
 
+#USERS
+marc_ant21@hotmail.com
+philippe.bouillon@codeboxx.biz
+mathieu.lefrançois@codeboxx.biz
+mathieu.houde@codeboxx.biz
+remi.gagnon@codeboxx.biz
+serge.savoie@codeboxx.biz
+felix-antoine.paradis@codeboxx.biz
+nadya.fortier@codeboxx.biz
+
+PASSWORD FOR EVERYONE: 123456
 
 # API
 ### Twilio: 
