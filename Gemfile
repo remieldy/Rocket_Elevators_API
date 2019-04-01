@@ -77,6 +77,14 @@ gem 'figaro'
 #
 gem 'ibm_watson', '~> 0.13.0'
 #
+gem 'aws-sdk-transcribeservice', '~> 1.0'
+#
+gem 'aws-sdk-s3', '~> 1'
+#
+gem 'paperclip'
+#
+gem 'aws-sdk'
+
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

@@ -16,6 +16,7 @@
               $("#audio").attr("src", src)
             })
           })
+
       - @abstract_models.each do |abstract_model|
         - if authorized? :index, abstract_model
           - index_path = index_path(model_name: abstract_model.to_param)
