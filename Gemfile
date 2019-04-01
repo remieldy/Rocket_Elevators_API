@@ -30,8 +30,6 @@ gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 #
 gem 'font-awesome-rails'
 #
-gem 'sendgrid-ruby', '~> 5.3'
-#
 gem 'jquery-ui-rails'
 #
 gem 'bootstrap-social-rails'
