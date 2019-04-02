@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_14_155950) do
+ActiveRecord::Schema.define(version: 2019_04_01_172357) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "address_type"
@@ -98,6 +98,26 @@ ActiveRecord::Schema.define(version: 2019_03_14_155950) do
     t.index ["column_id"], name: "index_elevators_on_column_id"
   end
 
+  create_table "interventions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "building_id", null: false
+    t.bigint "battery_id"
+    t.bigint "column_id"
+    t.bigint "elevator_id"
+    t.datetime "intervention_start"
+    t.datetime "intervention_finish"
+    t.integer "intervention_result"
+    t.text "report"
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["battery_id"], name: "index_interventions_on_battery_id"
+    t.index ["building_id"], name: "index_interventions_on_building_id"
+    t.index ["column_id"], name: "index_interventions_on_column_id"
+    t.index ["elevator_id"], name: "index_interventions_on_elevator_id"
+    t.index ["user_id"], name: "index_interventions_on_user_id"
+  end
+
   create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "customer_id"
     t.string "full_name"
@@ -163,5 +183,7 @@ ActiveRecord::Schema.define(version: 2019_03_14_155950) do
   add_foreign_key "customers", "addresses", on_update: :cascade, on_delete: :cascade
   add_foreign_key "customers", "users", on_update: :cascade, on_delete: :cascade
   add_foreign_key "elevators", "columns", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "interventions", "buildings", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "interventions", "users", on_update: :cascade, on_delete: :cascade
   add_foreign_key "leads", "customers", on_update: :cascade, on_delete: :cascade
 end
