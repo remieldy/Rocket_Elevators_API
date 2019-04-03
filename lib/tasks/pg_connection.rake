@@ -40,7 +40,7 @@ namespace :export do
             Intervention.all.each do |intervention|
                 conn.exec("INSERT INTO \"factintervention\" (user_id, building_id, battery_id, column_id, elevator_id, intervention_start, intervention_finish, intervention_result, report, status) 
                 VALUES (#{intervention.user_id}, #{intervention.building_id}, #{intervention.battery_id.blank? ? 'NULL' : intervention.battery_id}, #{intervention.column_id.blank? ? 'NULL' : intervention.column_id}, #{intervention.elevator_id.blank? ? 'NULL' : intervention.elevator_id}, '#{intervention.intervention_start}',
-                    '#{intervention.intervention_finish.blank? ? '00-00-00 00:00:00' : intervention.intervention_finish}', '#{intervention.intervention_result}', '#{intervention.report}', '#{intervention.status}')")
+                    '#{intervention.intervention_finish}', '#{intervention.intervention_result}', '#{intervention.report}', '#{intervention.status}')")
             end
 
 
