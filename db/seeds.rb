@@ -205,3 +205,26 @@ end
     t.save!
 
 end
+
+csv_text = File.read(Rails.root.join('good_data', 'intervention.csv'))
+csv = CSV.parse(csv_text, col_sep: ",", :headers => true)
+csv.each do |row|
+   
+   row = row.to_hash
+   p row
+   t = Intervention.new
+   t.user_id = row['user_id']
+   t.building_id = row['building_id']
+   t.battery_id = row['battery_id']
+   t.column_id = row['column_id']
+   t.elevator_id = row['elevator_id']
+   t.intervention_start = row['intervention_start']
+   t.intervention_finish = row['intervention_finish']
+   t.intervention_result = row['intervention_result']
+   t.report = row['report']
+   t.status = row['status']
+   t.save!
+
+end
+
+

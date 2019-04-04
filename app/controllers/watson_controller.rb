@@ -30,9 +30,9 @@ req_options = {
   use_ssl: uri.scheme == "https",
 }
 # uncomment for watson response
-response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
-  http.request(request)
-end
+# response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+#   http.request(request)
+# end
 send_data response.body
 end
 end
