@@ -1,41 +1,41 @@
 user_id,building_id,battery_id,column_id,elevator_id,intervention_start,intervention_finish,intervention_result,report,status
-1,22,5,5,5, 2016/03/28/23:01 PM, 2017/05/20/14:11 PM,Incompleted,"In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",Interrupted
-2,23,2,2,2,2016/04/10/20:01 PM,2016/07/22/14:01 PM,Success,Fusce consequat. Nulla nisl. Nunc nisl.,Pending
-3,47,3,3,3,2017/02/07/9:05 AM,2018/08/12/16:25 PM,Incompleted,Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.,Resumed
-4,7,4,4,4,2016/02/07/9:05 AM,2016/07/07/11:17 AM,Failed,"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",InProgress
-5,27,1,1,1,2018/01/10/11:09 AM,2018/07/19/19:17 PM,Incompleted,Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.,Completed
-6,14,6,6,6,2016/07/19/19:17 PM,2017/09/05/22:17 PM,Failed,"Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",Resumed
-7,9,7,7,7,2016/11/09/08:17 AM,2017/04/05/22:17 PM,Success,Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.,Resumed
-1,16,8,8,8,2017/08/07/10:17 AM,2018/11/05/08:20 AM,Success,"Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",Pending
-2,11,9,9,9,2017/05/05/11:36 AM,2018/08/09/19:14 PM,Failed,"Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",Resumed
-3,9,10,10,10,2016/09/01/08:00 AM,2017/01/05/17:40 PM,Failed,Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.,Pending
-4,9,14,14,14,2017/05/03/10:46 AM,2018/02/08/11:00 AM,Success,"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",InProgress
-5,7,12,12,12,2017/08/01/07:46 AM,2017/11/10/11:24 AM,Failed,Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.,Completed
-6,13,13,13,13,2016/04/09/10:23 AM,2017/09/05/15:00 PM,Success,Sed ante. Vivamus tortor. Duis mattis egestas metus.,InProgress
-7,50,11,11,11,2016/04/04/07:00 AM,2018/09/04/18:10 PM,Incompleted,Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.,Resumed
-1,40,15,15,15,2016/01/01/09:45 AM,2017/08/05/16:35 PM,Failed,"Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",Resumed
-2,35,16,16,16,2017/08/05/09:35 AM,2018/06/05/16:35 PM,Success,In congue. Etiam justo. Etiam pretium iaculis justo.,InProgress
-3,34,17,17,17,2017/09/02/07:25 AM,2018/06/02/18:25 PM,Failed,In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.,InProgress
-4,38,21,21,21,2016/01/02/08:55 AM,2017/05/04/20:15 PM,Failed,Fusce consequat. Nulla nisl. Nunc nisl.,InProgress
-5,46,19,19,19,2017/09/09/10:15 AM,2018/01/01/22:15 PM,Success,Phasellus in felis. Donec semper sapien a libero. Nam dui.,Pending
-6,50,20,20,20,2017/05/12/09:00 AM,2018/08/02/17:40 PM,Incompleted,"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",InProgress
-7,4,18,18,18,2017/07/09/07:05 AM,2018/02/05/17:00 PM,Incompleted,Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.,Resumed
-1,39,22,22,22,2017/07/04/18:05 PM,2018/02/04/22:22 PM,Success,Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.,Resumed
-2,18,23,23,23,2016/09/02/19:15 PM,2018/05/08/13:08 PM,Failed,"Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",Interrupted
-3,4,24,24,24,2016/05/02/20:55 PM,2017/02/02/21:59 PM,Success,"Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",Interrupted
-4,26,25,25,25,2017/01/07/08:25 AM,2018/05/07/13:25 PM,Success,"Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",Resumed
-5,19,28,28,28,2017/04/01/09:15 AM,2018/09/07/20:00 PM,Incompleted,Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.,Pending
-6,48,27,27,27,2017/09/02/08:10 AM,2018/02/04/20:40 PM,Success,"Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",Resumed
-7,37,26,26,26,2016/02/06/10:10 AM,2018/08/04/13:10 PM,Failed,Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.,Resumed
-1,12,29,29,29,2017/01/01/07:48 AM,2018/08/02/13:48 PM,Incompleted,"Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",Interrupted
-2,29,30,30,30,2016/03/05/07:38 AM,2017/09/07/18:28 PM,Failed,"In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",Completed
-3,14,31,31,31,2017/09/07/07:50 AM,2018/03/03/18:57 PM,Incompleted,"Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",InProgress
-4,34,32,32,32,2016/05/05/10:52 AM,2018/09/07/18:32 PM,Success,Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.,Resumed
-5,26,33,33,33,2016/07/02/08:12 AM,2018/03/04/22:32 PM,Incompleted,In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.,Pending
-6,4,34,34,34,2016/04/09/10:12 AM,2018/06/09/18:15 PM,Incompleted,Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.,Interrupted
-7,37,36,36,36,2016/04/03/09:45 AM,2017/09/05/19:20 PM,Incompleted,"Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",Completed
-1,19,35,35,35,2016/02/07/07:25 AM,2017/08/02/19:50 PM,Incompleted,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",Completed
-2,51,37,37,37,2017/09/04/09:25 AM,2018/09/05/15:15 PM,Incompleted,"Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",Completed
-3,1,38,38,38,2017/08/03/07:35 AM,2018/03/02/20:25 PM,Failed,Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.,Interrupted
-4,7,39,39,39,2016/06/06/07:15 AM,2018/06/09/20:47 PM,Incompleted,Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.,Interrupted
-5,2,40,40,40,2017/06/09/09:15 AM,2018/02/04/21:25 PM,Incompleted,"Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",Pending
+1,22,5,5,5, 2016-03-28-23:01:00, 2017-05-20 14:11:00,Incompleted,"the cages were broken, the electrical system was defective.",Interrupted
+2,23,2,2,2,2016-04-10-20:01:00 ,2016-07-22-14:01:00,Success,repair of the support cables of the delevator cage,Pending
+3,47,3,3,3,2017-02-07-9:05:00 ,2018-08-12-16:25:00,Incompleted,door replacement ,Resumed
+4,7,4,4,4,2016-02-07-9:05:00 ,2016-07-07-11:17:00,incompleted,lights was broken inside elevator cage,InProgress
+5,27,1,1,1,2018-01-10-11:09:00,2018-07-19-19:17:00,Success,lights were broken and  the doors opened with difficulty,Completed
+6,14,6,6,6,2016-07-19-19:17:00,2017-09-05-22:17:00,Failed,replacement of elevator buttons,Resumed
+7,9,7,7,7,2016-11-09-08:17:00,2017-04-05-22:17:00,Success,replacement of elevator buttons and lights inside elevator,Resumed
+1,16,8,8,8,2017-08-07-10:17:00,2018-11-05-08:20:00,Success,replacement of elevator buttons ouside elevator,Pending
+2,11,9,9,9,2017-05-05-11:36:00 ,2018-08-09-19:14:00,Failed,"door replacement, and cables inside elevator",Resumed
+3,9,10,10,10,2016-09-01-08:00:00,2017-01-05-17:40:00,Success,emergency button replacement inside elevator,Pending
+4,9,14,14,14,2017-05-03-10:46:00,2018-02-08-11:00:00,Success,"replacing the emergency button, replacing the rolling mechanism",InProgress
+5,7,12,12,12,2017-08-01-07:46:00,2017-11-10-11:24:00,Failed,replacement of elevator buttons and lights inside elevator,Completed
+6,13,13,13,13,2016-04-09-10:23:00,2017-09-05-15:00:00,Success,lights was broken inside elevator cage,InProgress
+7,50,11,11,11,2016-04-04-07:00:00,2018-09-04-18:10:00,Incompleted,"the cages were broken, the electrical system was defective.",Resumed
+1,40,15,15,15,2016-01-01-09:45:00,2017-08-05-16:35:00,Failed,emergency lights were broken and  the doors opened with difficulty,Resumed
+2,35,16,16,16,2017-08-05-09:35:00,2018-06-05-16:35:00,Success,defective bearing systems,InProgress
+3,34,17,17,17,2017-09-02-07:25:00,2018-06-02-18:25:00,Failed,emergency lights were broken and  the doors opened with difficulty,InProgress
+4,38,21,21,21,2016-01-02-08:55:00,2017-05-04-20:15:00,Failed,emergency button replacement inside elevator,InProgress
+5,46,19,19,19,2017-09-09-10:15:00,2018-01-01-22:15:00,Success,"replacing the emergency button, replacing the rolling mechanism",Pending
+6,50,20,20,20,2017-05-12-09:00:00,2018-08-02-17:40:00,Incompleted,emergency lights was broken inside elevator cage,InProgress
+7,4,18,18,18,2017-07-09-07:05:00,2018-02-05-17:00:00,Incompleted,"defective bearing systems, and broken lights",Resumed
+1,39,22,22,22,2017-07-04-18:05:00,2018-02-04-22:22:00,Success,emergency lights were broken and  the doors opened with difficulty,Resumed
+2,18,23,23,23,2016-09-02-19:15:00,2018-05-08-13:08:00,Failed,replacement of elevator buttons and lights inside elevator,Interrupted
+3,4,24,24,24,2016-05-02-20:55:00,2017-02-02-21:59:00,Success,door and emergency voice system replacement,Interrupted
+4,26,25,25,25,2017-01-07-08:25:00,2018-05-07-13:25:00,Success,"replacing the emergency button, replacing the rolling mechanism",Resumed
+5,19,28,28,28,2017-04-01-09:15:00,2018-09-07-20:00:00,Incompleted,door and emergency voice system replacement,Pending
+6,48,27,27,27,2017-09-02-08:10:00,2018-02-04-20:40:00,Success,defective bearing systems,Resumed
+7,37,26,26,26,2016-02-06-10:10:00,2018-08-04-13:10:00,Failed,"replacing the emergency button, replacing the rolling mechanism",Resumed
+1,12,29,29,29,2017-01-01-07:48:00,2018-08-02-13:48:00,Incompleted,emergency system replacement,Interrupted
+2,29,30,30,30,2016-03-05-07:38:00,2017-09-07-18:28:00,Failed,"the cages were broken, the electrical system was defective.",Completed
+3,14,31,31,31,2017-09-07-07:50:00,2018-03-03-18:57:00,Incompleted,"replacing the emergency button, replacing the rolling mechanism",InProgress
+4,34,32,32,32,2016-05-05-10:52:00,2018-09-07-18:32:00,Success,"replacing the emergency button, replacing the rolling mechanism",Resumed
+5,26,33,33,33,2016-07-02-08:12:00,2018-03-04-22:32:00,Incompleted,"replacing the emergency button, replacing the rolling mechanism",Pending
+6,4,34,34,34,2016-04-09-10:12:00,2018-06-09-18:15:00,Incompleted,emergency lights were broken and  the doors opened with difficulty,Interrupted
+7,37,36,36,36,2016-04-03-09:45:00,2017-09-05-19:20:00,Incompleted,"replacing the emergency button, replacing the rolling mechanism",Completed
+1,19,35,35,35,2016-02-07-07:25:00,2017-08-02-19:50:00,Incompleted,lights was broken inside elevator cage,Completed
+2,51,37,37,37,2017-09-04-09:25:00,2018-09-05-15:15:00,Incompleted,"defective bearing systems, and broken lights",Completed
+3,1,38,38,38,2017-08-03-07:35:00,2018-03-02-20:25:00,Failed,replacement of elevator buttons and lights inside elevator,Interrupted
+4,7,39,39,39,2016-06-06-07:15:00,2018-06-09-20:47:00,Incompleted,"the cages were broken, the electrical system was defective.",Interrupted
+5,2,40,40,40,2017-06-09-09:15:00,2018-02-04-21:25:00,Incompleted,"the cages were broken, the electrical system was defective.",Pending
