@@ -78,6 +78,8 @@ gem 'aws-sdk-s3', '~> 1'
 gem 'paperclip'
 #
 gem 'aws-sdk'
+#
+gem 'graphql'
 
 
 # Use CoffeeScript for .coffee assets and views
