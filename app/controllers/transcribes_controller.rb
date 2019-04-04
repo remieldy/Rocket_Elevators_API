@@ -9,7 +9,7 @@ class TranscribesController < ApplicationController
           })
           
     client = Aws::TranscribeService::Client.new(region: 'us-east-2')
-      
+
     resp = client.start_transcription_job({
         transcription_job_name: "sample-transcripti", # required
         language_code: "en-US", # required, accepts en-US, es-US, en-AU, fr-CA, en-GB, de-DE, pt-BR, fr-FR, it-IT, ko-KR
@@ -23,5 +23,5 @@ class TranscribesController < ApplicationController
     resp = client.get_transcription_job({
         transcription_job_name: "sample-transcripti", # required
       })
-end
+    end
 end
