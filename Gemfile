@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
+ru
 ruby '2.6.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -78,8 +78,7 @@ gem 'aws-sdk-s3', '~> 1'
 gem 'paperclip'
 #
 gem 'aws-sdk'
-#
-gem 'graphql'
+
 
 
 # Use CoffeeScript for .coffee assets and views
