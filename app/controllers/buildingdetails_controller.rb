@@ -29,7 +29,7 @@ class BuildingdetailsController < ApplicationController
     respond_to do |format|
       if @buildingdetail.save
         format.html { redirect_to @buildingdetail, notice: 'Building detail was successfully created.' }
-        format.json { render :show, status: :created, location: @building_detail }
+        format.json { render :show, status: :created, location: @buildingdetail }
       else
         format.html { render :new }
         format.json { render json: @buildingdetail.errors, status: :unprocessable_entity }
@@ -42,8 +42,8 @@ class BuildingdetailsController < ApplicationController
   def update
     respond_to do |format|
       if @building_detail.update(buildingdetail_params)
-        format.html { redirect_to @building_detail, notice: 'Building detail was successfully updated.' }
-        format.json { render :show, status: :ok, location: @building_detail }
+        format.html { redirect_to @buildingdetail, notice: 'Building detail was successfully updated.' }
+        format.json { render :show, status: :ok, location: @buildingdetail }
       else
         format.html { render :edit }
         format.json { render json: @buildingdetail.errors, status: :unprocessable_entity }
