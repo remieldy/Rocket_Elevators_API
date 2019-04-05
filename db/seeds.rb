@@ -91,7 +91,7 @@ csv.each do |row|
     
     row = row.to_hash
     p row
-    t = BuildingDetail.new
+    t = Buildingdetail.new
     t.building_id = row['building_id']
     t.information = row['information']
     t.valeur = row['valeur']
