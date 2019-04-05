@@ -182,28 +182,18 @@
 			<section class="page-header page-header-xs">
 				<div class="container">
 
-					<h1>DATATABLES</h1>
-
+					<h1>Elevator Infos</h1>
 					<!-- page tabs -->
-					<ul class="page-header-tabs list-inline">
-					    <li><button class="list-group-item list-group-item-action" onclick="getDataElev()">Elevators</a></li>
-						<li><button class="list-group-item list-group-item-action" onclick="getDataBuil()">Buildings</a></li>
-						<li><button class="list-group-item list-group-item-action" onclick="getDataCol()">Columns</a></li>
-                        <li><button class="list-group-item list-group-item-action" onclick="getDataBat()">Batteries</a></li>
-                        <li><button class="list-group-item list-group-item-action" onclick="getDataLead()">Leads</a></li>
-					
-                    </ul><!-- /page tabs -->
 				</div>
 			</section>
 			<!-- /PAGE HEADER -->
 
 <!-- pre code -->
 			<section>
-
 			<div class="container">
-                <div id="elevatorid">
-					<h4>Elevators Infos</h4>
-					<table class="table table-striped table-hover table-bordered" id="table_6">
+                <div id="elevator_id">
+					<h4>Elevators</h4>
+					<table class="table table-striped table-hover table-bordered" id="table_1">
 					<thead>
 					    <tr>
 							<th>Id</th>
@@ -217,6 +207,7 @@
                             <th>Inspect certificate</th>
                             <th>Infos</th>
                             <th>Notes</th>
+
 						</tr>
 					</thead>
 
@@ -226,169 +217,6 @@
 				    </table>
                 </div>
             </div>
-			<div class="container">
-                <div id="elevator">
-					<h4>Elevators</h4>
-					<table class="table table-striped table-hover table-bordered" id="table_1">
-					<thead>
-					    <tr>
-							<th>Id</th>
-							<th>Column id</th>
-							<th>Serial number</th>
-							<th>Model type</th>
-							<th>Building type</th>
-							<th>Status</th>
-						</tr>
-					</thead>
-
-					<tbody id="elev">
-
-					</tbody>
-				    </table>
-                </div>
-            </div>
-            
-            <div class="container">
-                <div id="column">
-					<h4>Columns</h4>
-					<table class="table table-striped table-hover table-bordered" id="table_2">
-					<thead>
-					    <tr>
-							<th>Id</th>
-							<th>Battery id</th>
-							<th>Building type</th>
-							<th>Status</th>
-						</tr>
-					</thead>
-
-					<tbody id="col">
-
-					</tbody>
-				    </table>
-                </div>
-            </div>
-
-			 <div class="container">
-                <div id="columnid">
-					<h4>Columns Infos</h4>
-					<table class="table table-striped table-hover table-bordered" id="table_7">
-					<thead>
-					    <tr>
-							<th>Id</th>
-							<th>Battery id</th>
-							<th>Building type</th>
-							<th>Status</th>
-                            <th>Floor number</th>
-							<th>Notes</th>
-							<th>Informations</th>
-						</tr>
-					</thead>
-
-					<tbody id="colid">
-
-					</tbody>
-				    </table>
-                </div>
-            </div>
-
-
-            <div class="container">
-                <div id="battery">
-					<h4>Batteries</h4>
-					<table class="table table-striped table-hover table-bordered" id="table_3">
-					<thead>
-					    <tr>
-							<th>Id</th>
-							<th>Building id</th>
-                            <th>User id</th>
-							<th>Building type</th>
-							<th>Status</th>
-
-						</tr>
-					</thead>
-
-					<tbody id="bat">
-	
-					</tbody>
-				    </table>
-                </div>
-            </div>
-
-			 <div class="container">
-                <div id="batteryid">
-					<h4>Batteries Infos</h4>
-					<table class="table table-striped table-hover table-bordered" id="table_8">
-					<thead>
-					    <tr>
-							<th>Id</th>
-							<th>Building id</th>
-                            <th>User id</th>
-							<th>Building type</th>
-							<th>Status</th>
-                            <th>Date of install</th>
-                            <th>Date of inspect</th>
-                            <th>Inspect certificate</th>
-							<th>Infos</th>
-						</tr>
-					</thead>
-
-					<tbody id="batid">
-	
-					</tbody>
-				    </table>
-                </div>
-            </div>
-
-
-            <div class="container">
-                <div id="building">
-					<h4>Buildings</h4>
-					<table class="table table-striped table-hover table-bordered" id="table_4">
-					<thead>
-					    <tr>
-							<th>Id</th>
-							<th>Address id</th>
-                            <th>Admin contact name</th>
-							<th>Customer id</th>
-							<th>Email contact</th>
-							<th>Phone number contact</th>
-                            <th>Tech name</th>
-                            <th>Email tech contact</th>
-                            <th>Phone number tech</th>
-						</tr>
-					</thead>
-
-					<tbody id="buil">
-
-					</tbody>
-				    </table>
-                </div>
-            </div>
-
-            <div class="container">
-                <div id="lead">
-					<h4>Leads</h4>
-					<table class="table table-striped table-hover table-bordered" id="table_5">
-					<thead>
-					    <tr>
-							<th>Id</th>
-							<th>Customer id</th>
-                            <th>Name</th>
-							<th>Company name</th>
-							<th>Email</th>
-                            <th>Phone number</th>
-                            <th>Project name</th>
-                            <th>Department in charge</th>  
-						</tr>
-					</thead>
-
-					<tbody id="lea">
-
-					</tbody>
-				    </table>
-                </div>
-            </div>
-
 		</section>
 
 
@@ -437,6 +265,7 @@
 		<a href="#" id="toTop"></a>
 
         <%=javascript_include_tag "site" %>
+
 
         <%# <%=javascript_include_tag "site" %>
 		<!-- PRELOADER -->

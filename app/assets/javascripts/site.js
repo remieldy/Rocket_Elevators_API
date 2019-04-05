@@ -4,37 +4,186 @@ var _hash = window.location.hash;
 const uri = "http://rocket-elevator-api.azurewebsites.net";
 
 // init all tables hide
-$("#elevator, #building, #column, #lead, #battery").hide()
+$("#elevator, #building, #column, #lead, #battery, #elevatorid, #buildingid, #columnid, #leadid, #batteryid").hide()
 
 // show battery table
 function show_table_bat(){
-    $("#elevator, #building, #column, #lead").hide()
+    $("#batteryid, #elevator, #building, #column, #lead, #elevatorid, #buildingid, #columnid, #leadid").hide()
     $("#battery").show()
 }
 // show elevator table
 function show_table_ele(){
-    $("#battery, #building, #column, #lead").hide()
+    $("#elevatorid, #battery, #building, #column, #lead, #batteryid, #buildingid, #columnid, #leadid").hide()
     $("#elevator").show()
 }
 // show column table 
 function show_table_col(){
-    $("#elevator, #building, #battery, #lead").hide()
+    $("#columnid, #elevator, #building, #battery, #lead, #elevatorid, #buildingid, #batteryid, #leadid").hide()
     $("#column").show()
 }
 // show lead table
 function show_table_lead(){
-    $("#elevator, #building, #column, #battery").hide()
+    $("#leadid, #elevator, #building, #column, #battery, #elevatorid, #buildingid, #columnid, #batteryid").hide()
     $("#lead").show()
 }
 //show building table 
 function show_table_buil(){
-    $("#elevator, #battery, #column, #lead").hide()
+    $("#buildingid, #elevator, #battery, #column, #lead, #elevatorid, #batteryid, #columnid, #leadid").hide()
     $("#building").show()
+}
+//-------------------------------------------------------------------------------------
+
+function show_table_bat_id(){
+    $("#battery, #elevator, #building, #column, #lead, #elevatorid, #buildingid, #columnid, #leadid").hide()
+    $("#batteryid").show()
 }
 
 
-function getDataElev() {
+function show_table_ele_id(){
+    $("#elevator, #battery, #building, #column, #lead, #batteryid, #buildingid, #columnid, #leadid").hide()
+    $("#elevatorid").show()
+}
 
+function show_table_col_id(){
+    $("#column, #elevator, #building, #battery, #lead, #elevatorid, #buildingid, #batteryid, #leadid").hide()
+    $("#columnid").show()
+}
+
+function show_table_lead_id(){
+    $("#lead, #elevator, #building, #column, #battery, #elevatorid, #buildingid, #columnid, #batteryid").hide()
+    $("#leadid").show()
+}
+
+function show_table_buil_id(){
+    $("#building, #elevator, #battery, #column, #lead, #elevatorid, #batteryid, #columnid, #leadid").hide()
+    $("#buildingid").show()
+}
+
+$( document ).ready(function() {
+    getElvetorId();
+});
+
+$( document ).ready(function() {
+    getBatteryId();
+});
+
+$( document ).ready(function() {
+    getColId();
+});
+
+function getElvetorId() {
+        $('#table_1 tbody').on('click', 'tr', function () {
+            var table = $('#table_1').DataTable();
+            var data_table = table.row( this ).data();
+            var id_ele = data_table[0]
+            console.log(id_ele)
+        $.ajax({
+            type: "GET",
+            url: uri+"/api/elevator/"+id_ele,
+            cache: false,
+            success: function(data) {
+              const tBody = $("#elevid");
+              $(tBody).empty();
+        
+              $.each(data, function(key, item) {
+                const tr = $("<tr></tr>")
+                  .append($("<td></td>").text(item.id))
+                  .append($("<td></td>").text(item.column_id))
+                  .append($("<td></td>").text(item.serial_number))
+                  .append($("<td></td>").text(item.model_type))
+                  .append($("<td></td>").text(item.building_type))
+                  .append($("<td></td>").text(item.status))
+                  .append($("<td></td>").text(item.date_of_install))
+                  .append($("<td></td>").text(item.date_of_inspect))
+                  .append($("<td></td>").text(item.inspect_certificate))
+                  .append($("<td></td>").text(item.information))
+                  .append($("<td></td>").text(item.notes))
+        
+                tr.appendTo(tBody);
+
+              })
+              todos = data;
+              show_table_ele_id()
+            }
+          })
+        }
+        
+        )}
+
+        function getColId() {
+            $('#table_2 tbody').on('click', 'tr', function () {
+                var table = $('#table_2').DataTable();
+                var data_table = table.row( this ).data();
+                var id_ele = data_table[0]
+            $.ajax({
+                type: "GET",
+                url: uri+"/api/column/"+id_ele,
+                cache: false,
+                success: function(data) {
+                  const tBody = $("#colid");
+                  $(tBody).empty();
+            
+                  $.each(data, function(key, item) {
+                    const tr = $("<tr></tr>")
+                      .append($("<td></td>").text(item.id))
+                      .append($("<td></td>").text(item.battery_id))
+                      .append($("<td></td>").text(item.building_type))
+                      .append($("<td></td>").text(item.status))
+                      .append($("<td></td>").text(item.number_of_floors))
+                      .append($("<td></td>").text(item.notes))
+                      .append($("<td></td>").text(item.informations))
+            
+                    tr.appendTo(tBody);
+    
+                  })
+                  todos = data;
+                  show_table_col_id()
+                }
+              })
+            }
+            
+            )}
+
+
+            function getBatteryId() {
+                $('#table_3 tbody').on('click', 'tr', function () {
+                    var table = $('#table_3').DataTable();
+                    var data_table = table.row( this ).data();
+                    var id_ele = data_table[0]
+                $.ajax({
+                    type: "GET",
+                    url: uri+"/api/battery/"+id_ele,
+                    cache: false,
+                    success: function(data) {
+                      const tBody = $("#batid");
+                      $(tBody).empty();
+                
+                      $.each(data, function(key, item) {
+                        const tr = $("<tr></tr>")
+                          .append($("<td></td>").text(item.id))
+                          .append($("<td></td>").text(item.building_id))
+                          .append($("<td></td>").text(item.user_id))
+                          .append($("<td></td>").text(item.building_type))
+                          .append($("<td></td>").text(item.status))
+                          .append($("<td></td>").text(item.date_of_install))
+                          .append($("<td></td>").text(item.date_of_inspect))
+                          .append($("<td></td>").text(item.inspect_certificate))
+                          .append($("<td></td>").text(item.information))
+                
+                        tr.appendTo(tBody);
+        
+                      })
+                      todos = data;
+                      show_table_bat_id()
+                    }
+                  })
+                }
+                
+                )}
+
+
+
+function getDataElev() {
   $.ajax({
     type: "GET",
     url: uri+"/api/elevator",
@@ -44,8 +193,6 @@ function getDataElev() {
 
       $(tBody).empty();
 
-    //   getCount(data.length);
-
       $.each(data, function(key, item) {
         const tr = $("<tr></tr>")
           .append($("<td></td>").text(item.id))
@@ -54,9 +201,6 @@ function getDataElev() {
           .append($("<td></td>").text(item.model_type))
           .append($("<td></td>").text(item.building_type))
           .append($("<td></td>").text(item.status))
-          .append($("<td></td>").text(item.date_of_install))
-          .append($("<td></td>").text(item.date_of_inspect))
-          .append($("<td></td>").text(item.inspect_certificate))
 
         tr.appendTo(tBody);
       });
@@ -85,7 +229,6 @@ function getDataCol() {
             .append($("<td></td>").text(item.battery_id))
             .append($("<td></td>").text(item.building_type))
             .append($("<td></td>").text(item.status))
-            .append($("<td></td>").text(item.number_of_floors))
 
           tr.appendTo(tBody);
         });
@@ -113,9 +256,6 @@ function getDataCol() {
             .append($("<td></td>").text(item.user_id))
             .append($("<td></td>").text(item.building_type))
             .append($("<td></td>").text(item.status))
-            .append($("<td></td>").text(item.date_of_install))
-            .append($("<td></td>").text(item.date_of_inspect))
-            .append($("<td></td>").text(item.inspect_certificate))
   
           tr.appendTo(tBody);
         });
@@ -178,7 +318,6 @@ function getDataCol() {
             .append($("<td></td>").text(item.project_name))
             .append($("<td></td>").text(item.department_in_charge))
             .append($("<td></td>").text(item.created_at))
-            .append($("<td></td>").text(item.updated_at))
   
           tr.appendTo(tBody);
         });
