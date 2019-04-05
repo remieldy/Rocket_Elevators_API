@@ -66,7 +66,6 @@ function getElvetorId() {
             var table = $('#table_1').DataTable();
             var data_table = table.row( this ).data();
             var id_ele = data_table[0]
-            console.log(data_table[1])
             console.log(id_ele)
         $.ajax({
             type: "GET",
@@ -93,8 +92,8 @@ function getElvetorId() {
                 tr.appendTo(tBody);
 
               })
-              todos = data;
-              
+              todos = data; 
+              console.log("caliss")
             }
             
           })
