@@ -49,16 +49,6 @@ function show_table_col_id(){
     $("#columnid").show()
 }
 
-function show_table_lead_id(){
-    $("#lead, #elevator, #building, #column, #battery, #elevatorid, #buildingid, #columnid, #batteryid").hide()
-    $("#leadid").show()
-}
-
-function show_table_buil_id(){
-    $("#building, #elevator, #battery, #column, #lead, #elevatorid, #batteryid, #columnid, #leadid").hide()
-    $("#buildingid").show()
-}
-
 $( document ).ready(function() {
     getElvetorId();
 });
@@ -76,6 +66,7 @@ function getElvetorId() {
             var table = $('#table_1').DataTable();
             var data_table = table.row( this ).data();
             var id_ele = data_table[0]
+            console.log(data_table[1])
             console.log(id_ele)
         $.ajax({
             type: "GET",
@@ -103,11 +94,13 @@ function getElvetorId() {
 
               })
               todos = data;
-              show_table_ele_id()
+              
             }
+            
           })
+          show_table_ele_id()
         }
-        
+
         )}
 
         function getColId() {
@@ -317,7 +310,6 @@ function getDataCol() {
             .append($("<td></td>").text(item.phone_number))
             .append($("<td></td>").text(item.project_name))
             .append($("<td></td>").text(item.department_in_charge))
-            .append($("<td></td>").text(item.created_at))
   
           tr.appendTo(tBody);
         });
