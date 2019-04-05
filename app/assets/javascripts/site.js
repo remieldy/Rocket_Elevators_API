@@ -49,24 +49,28 @@ function show_table_col_id(){
     $("#columnid").show()
 }
 
-$( document ).ready(function() {
-    getElvetorId();
-});
 
-$( document ).ready(function() {
-    getBatteryId();
-});
+    $( document ).ready(function() {
+        getElvetorId();
+    });
 
-$( document ).ready(function() {
-    getColId();
-});
+    $( document ).ready(function() {
+        getBatteryId();
+    });
+
+    $( document ).ready(function() {
+        getColId();
+    });
+
+    // get elevator by id
 
 function getElvetorId() {
+    
         $('#table_1 tbody').on('click', 'tr', function () {
             var table = $('#table_1').DataTable();
             var data_table = table.row( this ).data();
             var id_ele = data_table[0]
-            console.log(id_ele)
+
         $.ajax({
             type: "GET",
             url: uri+"/api/elevator/"+id_ele,
@@ -75,32 +79,30 @@ function getElvetorId() {
               const tBody = $("#elevid");
               $(tBody).empty();
         
-              $.each(data, function(key, item) {
                 const tr = $("<tr></tr>")
-                  .append($("<td></td>").text(item.id))
-                  .append($("<td></td>").text(item.column_id))
-                  .append($("<td></td>").text(item.serial_number))
-                  .append($("<td></td>").text(item.model_type))
-                  .append($("<td></td>").text(item.building_type))
-                  .append($("<td></td>").text(item.status))
-                  .append($("<td></td>").text(item.date_of_install))
-                  .append($("<td></td>").text(item.date_of_inspect))
-                  .append($("<td></td>").text(item.inspect_certificate))
-                  .append($("<td></td>").text(item.information))
-                  .append($("<td></td>").text(item.notes))
+                  .append($("<td></td>").text(data.id))
+                  .append($("<td></td>").text(data.column_id))
+                  .append($("<td></td>").text(data.serial_number))
+                  .append($("<td></td>").text(data.model_type))
+                  .append($("<td></td>").text(data.building_type))
+                  .append($("<td></td>").text(data.status))
+                  .append($("<td></td>").text(data.date_of_install))
+                  .append($("<td></td>").text(data.date_of_inspect))
+                  .append($("<td></td>").text(data.inspect_certificate))
+                  .append($("<td></td>").text(data.information))
+                  .append($("<td></td>").text(data.notes))
         
                 tr.appendTo(tBody);
-
-              })
-              todos = data; 
-              console.log("caliss")
+                
             }
             
           })
           show_table_ele_id()
+
         }
 
         )}
+//  get column by id 
 
         function getColId() {
             $('#table_2 tbody').on('click', 'tr', function () {
@@ -115,27 +117,26 @@ function getElvetorId() {
                   const tBody = $("#colid");
                   $(tBody).empty();
             
-                  $.each(data, function(key, item) {
                     const tr = $("<tr></tr>")
-                      .append($("<td></td>").text(item.id))
-                      .append($("<td></td>").text(item.battery_id))
-                      .append($("<td></td>").text(item.building_type))
-                      .append($("<td></td>").text(item.status))
-                      .append($("<td></td>").text(item.number_of_floors))
-                      .append($("<td></td>").text(item.notes))
-                      .append($("<td></td>").text(item.informations))
+                      .append($("<td></td>").text(data.id))
+                      .append($("<td></td>").text(data.battery_id))
+                      .append($("<td></td>").text(data.building_type))
+                      .append($("<td></td>").text(data.status))
+                      .append($("<td></td>").text(data.number_of_floors))
+                      .append($("<td></td>").text(data.notes))
+                      .append($("<td></td>").text(data.informations))
             
                     tr.appendTo(tBody);
     
-                  })
                   todos = data;
                   show_table_col_id()
+ 
                 }
               })
             }
-            
-            )}
+        )}
 
+        // get battery by id 
 
             function getBatteryId() {
                 $('#table_3 tbody').on('click', 'tr', function () {
@@ -150,32 +151,32 @@ function getElvetorId() {
                       const tBody = $("#batid");
                       $(tBody).empty();
                 
-                      $.each(data, function(key, item) {
                         const tr = $("<tr></tr>")
-                          .append($("<td></td>").text(item.id))
-                          .append($("<td></td>").text(item.building_id))
-                          .append($("<td></td>").text(item.user_id))
-                          .append($("<td></td>").text(item.building_type))
-                          .append($("<td></td>").text(item.status))
-                          .append($("<td></td>").text(item.date_of_install))
-                          .append($("<td></td>").text(item.date_of_inspect))
-                          .append($("<td></td>").text(item.inspect_certificate))
-                          .append($("<td></td>").text(item.information))
+                          .append($("<td></td>").text(data.id))
+                          .append($("<td></td>").text(data.building_id))
+                          .append($("<td></td>").text(data.user_id))
+                          .append($("<td></td>").text(data.building_type))
+                          .append($("<td></td>").text(data.status))
+                          .append($("<td></td>").text(data.date_of_install))
+                          .append($("<td></td>").text(data.date_of_inspect))
+                          .append($("<td></td>").text(data.inspect_certificate))
+                          .append($("<td></td>").text(data.information))
                 
                         tr.appendTo(tBody);
         
-                      })
+  
                       todos = data;
                       show_table_bat_id()
+ 
                     }
                   })
                 }
                 
                 )}
 
-
-
+// get all elevator
 function getDataElev() {
+
   $.ajax({
     type: "GET",
     url: uri+"/api/elevator",
@@ -202,6 +203,8 @@ function getDataElev() {
   })
   show_table_ele()
 }
+
+// get all column 
 
 function getDataCol() {
     $.ajax({
@@ -231,6 +234,8 @@ function getDataCol() {
     show_table_col()
   }
 
+
+  // get all baterries
   function getDataBat() {
     $.ajax({
       type: "GET",
@@ -257,6 +262,7 @@ function getDataCol() {
     })
     show_table_bat();
   }
+// get all building 
 
   function getDataBuil() {
     $.ajax({
@@ -287,6 +293,7 @@ function getDataCol() {
     })
     show_table_buil();
   }
+// get all leads
 
   function getDataLead() {
     $.ajax({
@@ -298,7 +305,6 @@ function getDataCol() {
   
         $(tBody).empty();
 
-  
         $.each(data, function(key, item) {
           const tr = $("<tr></tr>")
             .append($("<td></td>").text(item.id))
@@ -319,43 +325,8 @@ function getDataCol() {
     show_table_lead();
   }
 
-function editItem(id) {
-  $.each(todos, function(key, item) {
-    if (item.id === id) {
-      $("#edit-name").val(item.name);
-      $("#edit-id").val(item.id);
-      $("#edit-isComplete")[0].checked = item.isComplete;
-    }
-  });
-  $("#spoiler").css({ display: "block" });
-}
-
-$(".my-form").on("submit", function() {
-  const item = {
-    name: $("#edit-name").val(),
-    isComplete: $("#edit-isComplete").is(":checked"),
-    id: $("#edit-id").val()
-  };
 
 
-  $.ajax({
-    url: uri + "/" + $("#edit-id").val(),
-    type: "PUT",
-    accepts: "application/json",
-    contentType: "application/json",
-    data: JSON.stringify(item),
-    success: function(result) {
-      getData();
-    }
-  });
-
-  closeInput();
-  return false;
-});
-
-function closeInput() {
-  $("#spoiler").css({ display: "none" });
-}
 
 /**
 	BROWSER HASH - from php/contact.php redirect!

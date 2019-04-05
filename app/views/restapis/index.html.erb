@@ -211,7 +211,12 @@
 							<th>Serial number</th>
 							<th>Model type</th>
 							<th>Building type</th>
-							<th>Status</th>
+							<th>Status<select id="forme-1" name="department">
+                                                <option value="select">--- Select ---</option>
+                                                <option value="1">Offline</option>
+                                                <option value="2">Online</option>
+                                                <option value="3">Intervention</option>
+                                            </select></th>
                             <th>Date of install</th>
                             <th>Date of inspect</th>
                             <th>Inspect certificate</th>
@@ -224,6 +229,7 @@
 
 					</tbody>
 				    </table>
+					<button type="submit" class="btn btn-dark" id="but-elev" onclick="editItemEle()">Submit</button>
                 </div>
             </div>
 			<div class="container">
@@ -277,7 +283,12 @@
 							<th>Id</th>
 							<th>Battery id</th>
 							<th>Building type</th>
-							<th>Status</th>
+							<th>Status<select id="forme-2" name="department">
+                                                <option value="select">--- Select ---</option>
+                                                <option value="Offline">Offline</option>
+                                                <option value="Online">Online</option>
+                                                <option value="Intervention">Intervention</option>
+                                            </select></th>
                             <th>Floor number</th>
 							<th>Notes</th>
 							<th>Informations</th>
@@ -288,6 +299,7 @@
 
 					</tbody>
 				    </table>
+					<button type="submit" class="btn btn-dark" id="but-col">Submit</button>
                 </div>
             </div>
 
@@ -311,6 +323,7 @@
 	
 					</tbody>
 				    </table>
+					<button type="submit" class="btn btn-dark" id="but-elev">Submit</button>
                 </div>
             </div>
 
@@ -324,7 +337,12 @@
 							<th>Building id</th>
                             <th>User id</th>
 							<th>Building type</th>
-							<th>Status</th>
+							<th>Status<select id="forme-3" name="department">
+                                                <option value="select">--- Select ---</option>
+                                                <option value="Offline">Offline</option>
+                                                <option value="Online">Online</option>
+                                                <option value="Intervention">Intervention</option>
+                                            </select></th>
                             <th>Date of install</th>
                             <th>Date of inspect</th>
                             <th>Inspect certificate</th>
@@ -336,6 +354,8 @@
 	
 					</tbody>
 				    </table>
+					
+					<button type="submit" class="btn btn-dark" id="but-vat">Submit</button>
                 </div>
             </div>
 
