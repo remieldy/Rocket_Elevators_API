@@ -2,7 +2,7 @@ user_id,building_id,battery_id,column_id,elevator_id,intervention_start,interven
 1,22,5,5,5, 2016-03-28-23:01:00, 2017-05-20 14:11:00,Incompleted,"the cages were broken, the electrical system was defective.",Interrupted
 2,23,2,2,2,2016-04-10-20:01:00 ,2016-07-22-14:01:00,Success,repair of the support cables of the delevator cage,Pending
 3,47,3,3,3,2017-02-07-9:05:00 ,2018-08-12-16:25:00,Incompleted,door replacement ,Resumed
-4,7,4,4,4,2016-02-07-9:05:00 ,2016-07-07-11:17:00,incompleted,lights was broken inside elevator cage,InProgress
+4,7,4,4,4,2016-02-07-9:05:00 ,2016-07-07-11:17:00,Incompleted,lights was broken inside elevator cage,InProgress
 5,27,1,1,1,2018-01-10-11:09:00,2018-07-19-19:17:00,Success,lights were broken and  the doors opened with difficulty,Completed
 6,14,6,6,6,2016-07-19-19:17:00,2017-09-05-22:17:00,Failed,replacement of elevator buttons,Resumed
 7,9,7,7,7,2016-11-09-08:17:00,2017-04-05-22:17:00,Success,replacement of elevator buttons and lights inside elevator,Resumed
