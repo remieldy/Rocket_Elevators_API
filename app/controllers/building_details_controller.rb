@@ -67,7 +67,7 @@ class BuildingDetailsController < ApplicationController
       @building_detail = BuildingDetail.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    
     def building_detail_params
       params.fetch(:building_detail, {})
     end

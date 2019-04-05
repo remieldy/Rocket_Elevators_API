@@ -67,7 +67,7 @@ class ColumnsController < ApplicationController
       @column = Column.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    
     def column_params
       params.fetch(:column, {})
     end

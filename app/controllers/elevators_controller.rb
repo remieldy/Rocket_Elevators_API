@@ -70,7 +70,7 @@ class ElevatorsController < ApplicationController
       @elevator = Elevator.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    
     def elevator_params
       params.fetch(:elevator, {})
     end
