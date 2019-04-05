@@ -17,4 +17,11 @@
 // = require plugins/slider.revolution/js/jquery.themepunch.tools.min
 // = require plugins/slider.revolution/js/jquery.themepunch.revolution.min.js
 // = require demo.revolution_slider
-//= require Chart.bundle
+// = require Chart.bundle
+// = require plugins/datatables/js/jquery.dataTables.min.js
+// = require plugins/datatables/js/dataTables.tableTools.min.js
+// = require plugins/datatables/js/dataTables.colReorder.min.js
+// = require plugins/datatables/js/dataTables.scroller.min.js
+// = require plugins/select2/js/select2.full.min.js
+
+

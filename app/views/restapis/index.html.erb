@@ -1,0 +1,400 @@
+<div id="slidetop">
+
+        <div class="container">
+            
+            <div class="row">
+
+                <div class="col-md-4">
+                    <h6><i class="icon-heart"></i> WHY ROCKET ELEVATORS ?</h6>
+                    <p>We are number one in construction of elevator in North America and second in Europe. We have the most efficient workers and our values are the customer service, fidelity and respect. Contact us and we guarantee that you will completely satisfy.
+
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <h6><i class="icon-envelope"></i> CONTACT INFO</h6>
+                    <ul class="list-unstyled">
+                        <li><b>Address:</b> 725 Boulevard Lebourgneuf <br /> Quebec, G2J 0C4, Canada</li>
+                        <li><b>Phone:</b> 1-800-565-2390</li>
+                        <li><b>Email:</b> <a href="mailto:support@yourname.com">support@codeboxx.com</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <a class="slidetop-toggle" href="#"><!-- toggle button --></a>
+
+    </div>
+    <!-- /SLIDE TOP -->
+
+
+    <!-- wrapper -->
+    <div id="wrapper">
+
+        <!-- 
+            AVAILABLE HEADER CLASSES
+            Default nav height: 96px
+            .header-md 		= 70px nav height
+            .header-sm 		= 60px nav height
+            .b-0 		= remove bottom border (only with transparent use)
+            .transparent	= transparent header
+            .translucent	= translucent header
+            .sticky			= sticky header
+            .static			= static header
+            .dark			= dark header
+            .bottom			= header on bottom
+            
+            shadow-before-1 = shadow 1 header top
+            shadow-after-1 	= shadow 1 header bottom
+            shadow-before-2 = shadow 2 header top
+            shadow-after-2 	= shadow 2 header bottom
+            shadow-before-3 = shadow 3 header top
+            shadow-after-3 	= shadow 3 header bottom
+            .clearfix		= required for mobile menu, do not remove!
+            Example Usage:  class="clearfix sticky header-sm transparent b-0"
+        -->
+        <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+            <!-- TOP NAV -->
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Logo -->
+
+                    <a class="logo float-left scrollTo" href="#top">
+                        <img src="assets/R2.png" alt="" />
+                    </a>
+
+                    <!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+								<nav class="nav-main">
+	
+									<!-- 
+										.nav-onepage
+										Required for onepage navigation links
+										
+										Add .external for an external link!
+									-->
+									<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+										<%= link_to "", '/index', :method => :get %>
+										<li class="active"><!-- HOME -->
+											<a href="index.html">
+												HOME
+											</a>
+										</li>
+										<li><!-- SERVICES -->
+											<a class="dropdown-toogle">
+												SERVICES
+	
+											</a>
+											<ul class="dropdown-menu">
+												<li>
+													<%= link_to "", '/residential', :method => :get %> <a href="residential.html">Residential</a>
+												</li>
+												<li>
+													<%= link_to "", '/commercial', :method => :get %> <a href="commercial.html">Commercial</a>
+												</li>
+											</ul>
+											
+										</li>
+											<%= link_to "", '/index', :method => :get %> <a href="index.html#work">
+										<li><!-- WORK -->
+												PORTFOLIO
+											</a>
+										</li>
+											<%= link_to "", '/index', :method => :get %><a href="index.html#news">
+										<li><!-- NEWS -->
+												NEWS
+											</a>
+										</li>
+											<%= link_to "", '/index', :method => :get %><a href="index.html#contact">
+										<li><!-- OVERVIEW -->
+												CONTACT
+											</a>
+										</li>
+											<%= link_to "", '/index', :method => :get %><a href="index.html#clients">
+										<li><!-- CLIENTS -->
+												CLIENTS
+											</a>
+										</li>
+										<%=link_to "", '/emp-dashboard', :method => :get %>
+                                <li><!-- CLIENTS -->
+                                    <a href="/emp-dashboard">
+                                        EMPLOYEES
+                                    </a>
+                                </li>
+							<%=link_to "", '/stats', :method => :get %>
+                                <li> <!-- STATS -->
+                                    <a href="stats">
+                                        STATS
+                                    </a>
+                                </li>
+                                <%=link_to "", '/geolocations', :method => :get %>
+                                <li> <!-- GEOLOCATIONS -->
+                                    <a href="geolocations">
+                                        GEOLOCATIONS
+                                    </a>
+                                </li>
+									</ul>
+	
+								</nav>
+							</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+
+        </div>
+
+        
+
+
+			<!-- 
+				PAGE HEADER 
+				
+				CLASSES:
+					.page-header-xs	= 20px margins
+					.page-header-md	= 50px margins
+					.page-header-lg	= 80px margins
+					.page-header-xlg= 130px margins
+					.dark			= dark page header
+
+					.shadow-before-1 	= shadow 1 header top
+					.shadow-after-1 	= shadow 1 header bottom
+					.shadow-before-2 	= shadow 2 header top
+					.shadow-after-2 	= shadow 2 header bottom
+					.shadow-before-3 	= shadow 3 header top
+					.shadow-after-3 	= shadow 3 header bottom
+			-->
+			<section class="page-header page-header-xs">
+				<div class="container">
+
+					<h1>DATATABLES</h1>
+
+					<!-- page tabs -->
+					<ul class="page-header-tabs list-inline">
+					    <li><button class="list-group-item list-group-item-action" onclick="getDataElev()">Elevators</a></li>
+						<li><button class="list-group-item list-group-item-action" onclick="getDataBuil()">Buildings</a></li>
+						<li><button class="list-group-item list-group-item-action" onclick="getDataCol()">Columns</a></li>
+                        <li><button class="list-group-item list-group-item-action" onclick="getDataBat()">Batteries</a></li>
+                        <li><button class="list-group-item list-group-item-action" onclick="getDataLead()">Leads</a></li>
+					
+                    </ul><!-- /page tabs -->
+				</div>
+			</section>
+			<!-- /PAGE HEADER -->
+
+<!-- pre code -->
+			<section>
+			<div class="container">
+                <div id="elevator">
+					<h4>Elevators</h4>
+					<table class="table table-striped table-hover table-bordered" id="table_1">
+					<thead>
+					    <tr>
+							<th>Id</th>
+							<th>Column id</th>
+							<th>Serial number</th>
+							<th>Model type</th>
+							<th>Building type</th>
+							<th>Status</th>
+                            <th>Date of install</th>
+                            <th>Date of inspect</th>
+                            <th>Inspect certificate</th>
+						</tr>
+					</thead>
+
+					<tbody id="elev">
+
+					</tbody>
+				    </table>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div id="column">
+					<h4>Columns</h4>
+					<table class="table table-striped table-hover table-bordered" id="table_2">
+					<thead>
+					    <tr>
+							<th>Id</th>
+							<th>Battery id</th>
+							<th>Building type</th>
+							<th>Status</th>
+                            <th>Floor number</th>
+						</tr>
+					</thead>
+
+					<tbody id="col">
+
+					</tbody>
+				    </table>
+                </div>
+            </div>
+
+
+
+            <div class="container">
+                <div id="battery">
+					<h4>Batteries</h4>
+					<table class="table table-striped table-hover table-bordered" id="table_3">
+					<thead>
+					    <tr>
+							<th>Id</th>
+							<th>Building id</th>
+                            <th>User id</th>
+							<th>Building type</th>
+							<th>Status</th>
+                            <th>Date of install</th>
+                            <th>Date of inspect</th>
+                            <th>Inspect certificate</th>
+
+						</tr>
+					</thead>
+
+					<tbody id="bat">
+	
+					</tbody>
+				    </table>
+                </div>
+            </div>
+
+            <div class="container">
+                <div id="building">
+					<h4>Buildings</h4>
+					<table class="table table-striped table-hover table-bordered" id="table_4">
+					<thead>
+					    <tr>
+							<th>Id</th>
+							<th>Address id</th>
+                            <th>Admin contat name</th>
+							<th>Email contact</th>
+							<th>Phone number contact</th>
+                            <th>Tech name</th>
+                            <th>Email tech contact</th>
+                            <th>Phone number tech</th>
+						</tr>
+					</thead>
+
+					<tbody id="buil">
+
+					</tbody>
+				    </table>
+                </div>
+            </div>
+
+            <div class="container">
+                <div id="lead">
+					<h4>Leads</h4>
+					<table class="table table-striped table-hover table-bordered" id="table_5">
+					<thead>
+					    <tr>
+							<th>Id</th>
+							<th>Customer id</th>
+                            <th>Name</th>
+							<th>Company name</th>
+							<th>Email</th>
+                            <th>Phone number</th>
+                            <th>Project name</th>
+                            <th>Department in charge</th>
+                            <th>Created At</th>
+                            <th>Update At</th>
+                            
+						</tr>
+					</thead>
+
+					<tbody id="lea">
+
+					</tbody>
+				    </table>
+                </div>
+            </div>
+
+
+
+
+
+
+<!-- pre code -->
+
+        <div>
+
+   
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+
+					<div class="row">
+
+						<!-- col #1 -->
+						<div class="col-md-8">
+
+							<h3 class="letter-spacing-1">WHY ROCKET ELEVATORS ?</h3>
+
+							<!-- Small Description -->
+							<p>
+								We are number one in construction of elevator in North America and second in Europe. We have the most efficient workers and our values are the customer service, 
+								fidelity and respect. Contact us and we guarantee that you will completely satisfy. 
+							</p>
+							<h2>1-800-555-1234</h2>
+						</div>
+						<!-- /col #1 -->
+
+					</div>
+
+				</div>
+
+				<div class="copyright">
+					<div class="container">
+						&copy; All Rights Reserved, Rocket Elevators
+					</div>
+				</div>
+
+			</footer>
+			<!-- /FOOTER -->
+
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+        <%=javascript_include_tag "site" %>
+
+        <%# <%=javascript_include_tag "site" %>
+		<!-- PRELOADER -->
+
+		<!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+
+		
+		<!-- STYLESWITCHER - REMOVE -->
+
+
+		<!-- REVOLUTION SLIDER -->
+		
+
+		<!-- PAGELEVEL SCRIPTS -->
+		
+	
+
+		<!-- 
+		# 	GMAP.JS 
+		# 	http://hpneo.github.io/gmaps/
+		# -->

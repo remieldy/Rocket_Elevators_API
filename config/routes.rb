@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :leads
   resources :quotes
   resources :geolocations
+  resources :restapis
   
   get '/gform', to: 'pages#gform'
   get '/residential', to: 'pages#residential'

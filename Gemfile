@@ -81,6 +81,11 @@ gem 'aws-sdk'
 #
 gem 'waitutil', '~> 0.2.1'
 #
+gem 'jquery-datatables'
+#
+gem 'graphql'
+#
+gem 'ajax-datatables-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
