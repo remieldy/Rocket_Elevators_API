@@ -144,7 +144,14 @@
                                 <%=link_to "", '/geolocations', :method => :get %>
                                 <li> <!-- GEOLOCATIONS -->
                                     <a href="geolocations">
-                                        GEOLOCATIONS
+                                        GEO
+                                    </a>
+                                </li>
+								 </li>
+								<%=link_to "", '/restapis', :method => :get %>
+                                <li> <!-- GEOLOCATIONS -->
+                                    <a href="restapis">
+                                        INFOS
                                     </a>
                                 </li>
 									</ul>
@@ -187,10 +194,10 @@
 					<!-- page tabs -->
 					<ul class="page-header-tabs list-inline">
 					    <li><button class="list-group-item list-group-item-action" onclick="getDataElev()">Elevators</a></li>
-						<li><button class="list-group-item list-group-item-action" onclick="getDataBuil()">Buildings</a></li>
 						<li><button class="list-group-item list-group-item-action" onclick="getDataCol()">Columns</a></li>
                         <li><button class="list-group-item list-group-item-action" onclick="getDataBat()">Batteries</a></li>
-                        <li><button class="list-group-item list-group-item-action" onclick="getDataLead()">Leads</a></li>
+						<li><button class="list-group-item list-group-item-action" onclick="getDataBuil()">Buildings /GET interventions </a></li>
+                        <li><button class="list-group-item list-group-item-action" onclick="getDataLead()">Leads /GET last 30 days</a></li>
 					
                     </ul><!-- /page tabs -->
 				</div>
@@ -213,9 +220,9 @@
 							<th>Building type</th>
 							<th>Status<select id="forme-1" name="department">
                                                 <option value="select">--- Select ---</option>
-                                                <option value="1">Offline</option>
-                                                <option value="2">Online</option>
-                                                <option value="3">Intervention</option>
+                                                <option value="Offline">Offline</option>
+                                                <option value="Online">Online</option>
+                                                <option value="Intervention">Intervention</option>
                                             </select></th>
                             <th>Date of install</th>
                             <th>Date of inspect</th>
@@ -338,11 +345,11 @@
                             <th>User id</th>
 							<th>Building type</th>
 							<th>Status<select id="forme-3" name="department">
-                                                <option value="select">--- Select ---</option>
-                                                <option value="Offline">Offline</option>
-                                                <option value="Online">Online</option>
-                                                <option value="Intervention">Intervention</option>
-                                            </select></th>
+                                        <option value="select">--- Select ---</option>
+                                        <option value="Offline">Offline</option>
+                                        <option value="Online">Online</option>
+                                        <option value="Intervention">Intervention</option>
+                                        </select></th>
                             <th>Date of install</th>
                             <th>Date of inspect</th>
                             <th>Inspect certificate</th>
@@ -369,7 +376,6 @@
 							<th>Id</th>
 							<th>Address id</th>
                             <th>Admin contact name</th>
-							<th>Customer id</th>
 							<th>Email contact</th>
 							<th>Phone number contact</th>
                             <th>Tech name</th>

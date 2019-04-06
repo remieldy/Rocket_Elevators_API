@@ -62,6 +62,29 @@ function show_table_col_id(){
         getColId();
     });
 
+    function editItemEle() {
+      var table_1 = $('#table_6').DataTable()
+      var data = table_1.row(0).data()[0]
+
+    var id = data.toString()
+    $("#but-elev").on("submit", function(e) {
+      e.preventDefault()
+      const item = {
+        status: $("#forme-1").val(), 
+      }
+      
+      $.ajax({
+        url: uri+"/api/elevator/"+id,
+        type: "PUT",
+        accepts: "application/json",
+        contentType: "application/json",
+        data: JSON.stringify(item),
+        success: function(result) {
+          getDataElev()
+        }
+      })
+    })};
+
     // get elevator by id
 
 function getElvetorId() {
@@ -93,7 +116,7 @@ function getElvetorId() {
                   .append($("<td></td>").text(data.notes))
         
                 tr.appendTo(tBody);
-                
+                tatbl_1 = data;
             }
             
           })
@@ -170,9 +193,9 @@ function getElvetorId() {
  
                     }
                   })
-                }
+               }
                 
-                )}
+           )}
 
 // get all elevator
 function getDataElev() {
@@ -215,8 +238,6 @@ function getDataCol() {
         const tBody = $("#col");
 
         $(tBody).empty();
-  
-      //   getCount(data.length);
   
         $.each(data, function(key, item) {
           const tr = $("<tr></tr>")
