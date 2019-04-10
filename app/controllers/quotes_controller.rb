@@ -54,7 +54,7 @@ class QuotesController < ApplicationController
     end
 
     ZendeskAPI::Ticket.create!($client, :subject => "#{@quote.full_name} from #{@quote.company_name}", :type=> "question", :comment => { :value => "The contact #{@quote.full_name} from company #{@quote.company_name} can be reached at email  #{@quote.email} and at phone number #{@quote.phone_number}. #{@quote.department} has a project named which would require contribution from Rocket Elevators." })
-
+      # ZendeskAPI::Ticket.create!($client, :subject => "#{@lead.full_name} from #{@lead.company_name}", :type=> "task", :comment => { :value => "The contact #{@lead.full_name} from company #{@lead.company_name} with the number of building  #{@lead.building} and number of battery #{@lead.battery}. with number of column #{@lead.column} has a elevator name #{@lead.elevator} which would require contribution from Rocket Elevators. #{@lead.users} who makes a job. #{@lead.description} your description about intervention.
     respond_to do |format|
       if @quote.save
         format.html { redirect_to "/gform" }

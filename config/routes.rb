@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :interventions
   resources :stats
   devise_for :users
   mount RailsAdmin::Engine => '/emp-dashboard', as: 'rails_admin'
@@ -40,6 +41,9 @@ Rails.application.routes.draw do
   get 'dropbox/auth_callback' => 'dropbox#auth_callback'
   get '/map_google', to: 'pages#map_google'
   get '/watson', to: 'watson#watson'
+  get 'intervention', to: 'pages#intervention'
+  post 'intervention' => 'pages#intervention'
+  get  'pages/contact' => 'pages#/contact us'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'pages#index'
 

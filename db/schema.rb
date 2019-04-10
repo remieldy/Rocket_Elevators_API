@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_01_172357) do
+ActiveRecord::Schema.define(version: 2019_04_09_140420) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "address_type"
@@ -38,11 +38,11 @@ ActiveRecord::Schema.define(version: 2019_04_01_172357) do
     t.index ["user_id"], name: "index_batteries_on_user_id"
   end
 
-  create_table "building_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "buildingdetails", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "building_id", null: false
     t.string "information"
     t.string "valeur"
-    t.index ["building_id"], name: "index_building_details_on_building_id"
+    t.index ["building_id"], name: "index_buildingdetails_on_building_id"
   end
 
   create_table "buildings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -98,24 +98,24 @@ ActiveRecord::Schema.define(version: 2019_04_01_172357) do
     t.index ["column_id"], name: "index_elevators_on_column_id"
   end
 
-  create_table "interventions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id", null: false
+  create_table "intervention", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "author_id"
+    t.bigint "customer_id", null: false
     t.bigint "building_id", null: false
     t.bigint "battery_id"
     t.bigint "column_id"
     t.bigint "elevator_id"
-    t.datetime "intervention_start"
-    t.datetime "intervention_finish"
-    t.integer "intervention_result"
+    t.date "interventionStart"
+    t.date "intervention_finish"
+    t.string "results", null: false
     t.text "report"
-    t.integer "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["battery_id"], name: "index_interventions_on_battery_id"
-    t.index ["building_id"], name: "index_interventions_on_building_id"
-    t.index ["column_id"], name: "index_interventions_on_column_id"
-    t.index ["elevator_id"], name: "index_interventions_on_elevator_id"
-    t.index ["user_id"], name: "index_interventions_on_user_id"
+    t.text "statut", null: false
+    t.index ["author_id"], name: "index_intervention_on_author_id"
+    t.index ["battery_id"], name: "index_intervention_on_battery_id"
+    t.index ["building_id"], name: "index_intervention_on_building_id"
+    t.index ["column_id"], name: "index_intervention_on_column_id"
+    t.index ["customer_id"], name: "index_intervention_on_customer_id"
+    t.index ["elevator_id"], name: "index_intervention_on_elevator_id"
   end
 
   create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -176,14 +176,18 @@ ActiveRecord::Schema.define(version: 2019_04_01_172357) do
 
   add_foreign_key "batteries", "buildings", on_update: :cascade, on_delete: :cascade
   add_foreign_key "batteries", "users", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "building_details", "buildings", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "buildingdetails", "buildings", on_update: :cascade, on_delete: :cascade
   add_foreign_key "buildings", "addresses", on_update: :cascade, on_delete: :cascade
   add_foreign_key "buildings", "customers", on_update: :cascade, on_delete: :cascade
   add_foreign_key "columns", "batteries", on_update: :cascade, on_delete: :cascade
   add_foreign_key "customers", "addresses", on_update: :cascade, on_delete: :cascade
   add_foreign_key "customers", "users", on_update: :cascade, on_delete: :cascade
   add_foreign_key "elevators", "columns", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "interventions", "buildings", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "interventions", "users", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "intervention", "batteries", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "intervention", "buildings", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "intervention", "columns", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "intervention", "customers", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "intervention", "elevators", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "intervention", "users", column: "author_id"
   add_foreign_key "leads", "customers", on_update: :cascade, on_delete: :cascade
 end

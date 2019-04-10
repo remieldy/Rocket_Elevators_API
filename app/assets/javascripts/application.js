@@ -23,5 +23,6 @@
 // = require plugins/datatables/js/dataTables.colReorder.min.js
 // = require plugins/datatables/js/dataTables.scroller.min.js
 // = require plugins/select2/js/select2.full.min.js
+// = require intervention.js
 
 

@@ -40,6 +40,10 @@ class LeadsController < ApplicationController
       #{@lead.project_description}
       Attached Message: #{@lead.message}"})
 
+      # ZendeskAPI::Ticket.create!($client, :subject => "#{@lead.full_name} from #{@lead.company_name}", :type=> "task", :comment => { :value => "The contact #{@lead.full_name} from company #{@lead.company_name} with the number of building  #{@lead.building} and number of battery #{@lead.battery}. with number of column #{@lead.column} has a elevator name #{@lead.elevator} which would require contribution from Rocket Elevators. #{@lead.users} who makes a job. #{@lead.description} your description about intervention.
+      #   #{@lead.project_description}
+      #   Attached Message: #{@lead.message}"})
+
       sendgrid(@lead)
 
     respond_to do |format|
